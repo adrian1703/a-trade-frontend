@@ -1,7 +1,11 @@
 'use client';
 import Image from 'next/image';
 import styles from './page.module.css';
-import { useLayoutDispatch, useLayoutState } from '@/context/LayoutContext';
+import {
+  LayoutActionType,
+  useLayoutDispatch,
+  useLayoutState,
+} from '@/context/LayoutContext';
 
 export default function Home() {
   const { isSidebarOpened } = useLayoutState();
@@ -50,7 +54,7 @@ export default function Home() {
           </a>
         </div>
         <button
-          onClick={() => dispatch({ type: 'TOGGLE_SIDEBAR' })}
+          onClick={() => dispatch({ type: LayoutActionType.TOGGLE_SIDEBAR })}
           style={{ marginBottom: '1rem' }}
         >
           Toggle Sidebar (Currently: {isSidebarOpened ? 'Open' : 'Closed'})

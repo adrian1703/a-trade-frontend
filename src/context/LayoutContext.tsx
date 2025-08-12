@@ -4,8 +4,11 @@ import React, { Dispatch, ReactNode, useReducer, useContext } from 'react';
 interface LayoutState {
   isSidebarOpened: boolean;
 }
+export enum LayoutActionType {
+  TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR',
+}
 
-type LayoutAction = { type: 'TOGGLE_SIDEBAR' };
+type LayoutAction = { type: LayoutActionType.TOGGLE_SIDEBAR };
 
 const LayoutStateContext = React.createContext<LayoutState | undefined>(
   undefined
@@ -16,7 +19,7 @@ const LayoutDispatchContext = React.createContext<
 
 function layoutReducer(state: LayoutState, action: LayoutAction): LayoutState {
   switch (action.type) {
-    case 'TOGGLE_SIDEBAR':
+    case LayoutActionType.TOGGLE_SIDEBAR:
       return { ...state, isSidebarOpened: !state.isSidebarOpened };
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
