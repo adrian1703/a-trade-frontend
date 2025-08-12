@@ -1,7 +1,12 @@
+'use client';
 import Image from 'next/image';
 import styles from './page.module.css';
+import { useLayoutDispatch, useLayoutState } from '@/context/LayoutContext';
 
 export default function Home() {
+  const { isSidebarOpened } = useLayoutState();
+  const dispatch = useLayoutDispatch();
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -19,7 +24,6 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
-
         <div className={styles.ctas}>
           <a
             className={styles.primary}
@@ -45,6 +49,12 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <button
+          onClick={() => dispatch({ type: 'TOGGLE_SIDEBAR' })}
+          style={{ marginBottom: '1rem' }}
+        >
+          Toggle Sidebar (Currently: {isSidebarOpened ? 'Open' : 'Closed'})
+        </button>
       </main>
       <footer className={styles.footer}>
         <a
