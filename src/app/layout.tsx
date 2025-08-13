@@ -3,7 +3,7 @@ import './globals.css';
 import { LayoutProvider } from '@/context/LayoutContext';
 import { StyledEngineProvider, ThemeProvider as ThemeProviderV5 } from '@mui/material/styles';
 import dark from '@/themes/dark';
-import NavigationSidebar from '@/navigation/NavigationSidebar';
+import NavigationSidebar from '@/navigation/Sidebar/NavigationSidebar';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
