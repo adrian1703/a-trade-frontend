@@ -13,7 +13,7 @@ const ImagesFormItem = (props) => {
     path,
     fileProps,
     max = undefined,
-    inputProps
+    inputProps,
   } = props;
 
   const { label } = schema[name];

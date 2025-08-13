@@ -10,12 +10,8 @@ export enum LayoutActionType {
 
 type LayoutAction = { type: LayoutActionType.TOGGLE_SIDEBAR };
 
-const LayoutStateContext = React.createContext<LayoutState | undefined>(
-  undefined
-);
-const LayoutDispatchContext = React.createContext<
-  Dispatch<LayoutAction> | undefined
->(undefined);
+const LayoutStateContext = React.createContext<LayoutState | undefined>(undefined);
+const LayoutDispatchContext = React.createContext<Dispatch<LayoutAction> | undefined>(undefined);
 
 function layoutReducer(state: LayoutState, action: LayoutAction): LayoutState {
   switch (action.type) {
@@ -32,9 +28,7 @@ export function LayoutProvider({ children }: { children: ReactNode }) {
   });
   return (
     <LayoutStateContext.Provider value={state}>
-      <LayoutDispatchContext.Provider value={dispatch}>
-        {children}
-      </LayoutDispatchContext.Provider>
+      <LayoutDispatchContext.Provider value={dispatch}>{children}</LayoutDispatchContext.Provider>
     </LayoutStateContext.Provider>
   );
 }

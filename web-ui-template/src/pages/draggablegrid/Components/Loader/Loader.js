@@ -8,15 +8,15 @@ const styles = (theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     margin: '3.5rem',
-  },  
-})
+  },
+});
 
 const Loader = ({ classes }) => {
   return (
-      <div className={classes.container}>
-        <CircularProgress/>
-      </div>
-  )
-}
+    <div className={classes.container}>
+      <CircularProgress />
+    </div>
+  );
+};
 
 export default withStyles(styles)(Loader);

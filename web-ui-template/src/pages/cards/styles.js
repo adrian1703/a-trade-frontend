@@ -1,23 +1,23 @@
-import { makeStyles } from "@mui/styles";
+import { makeStyles } from '@mui/styles';
 
-export default makeStyles(theme => ({
+export default makeStyles((theme) => ({
   card: {
-    minWidth: "100%",
-    backgroundImage: props => `url(${props.card})`,
-    backgroundSize: "cover",
-    backgroundPosition: "50%",
-    color: "#fff",
+    minWidth: '100%',
+    backgroundImage: (props) => `url(${props.card})`,
+    backgroundSize: 'cover',
+    backgroundPosition: '50%',
+    color: '#fff',
   },
   cardMedia: {
-    minWidth: "100%",
+    minWidth: '100%',
   },
   media: {
-    height: "140px",
+    height: '140px',
   },
   starIcon: {
-    color: "#ffc247",
+    color: '#ffc247',
   },
   cardActions: {
-    padding: theme.spacing(2)
-  }
+    padding: theme.spacing(2),
+  },
 }));

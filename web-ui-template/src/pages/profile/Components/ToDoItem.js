@@ -19,8 +19,8 @@ const styles = (theme) => ({
     color: theme.palette.text.hint,
     textDecoration: 'line-through',
     'div > div': {
-      background: '#9B9B9B !important'
-    }
+      background: '#9B9B9B !important',
+    },
   },
   taskText: {
     display: 'flex',
@@ -33,7 +33,7 @@ const styles = (theme) => ({
       fontWeight: theme.typography.fontWeightMedium,
       width: 210,
       overflow: 'hidden',
-    }
+    },
   },
   time: {
     fontSize: 10,
@@ -41,33 +41,37 @@ const styles = (theme) => ({
   },
   menuItem: {
     color: theme.palette.text.hint,
-  }
-})
+  },
+});
 
-const ToDoItem = ({ classes, time, title, color, backgroundColor}) => {
+const ToDoItem = ({ classes, time, title, color, backgroundColor }) => {
   const [moreButtonRef, setMoreButtonRef] = useState(null);
   const [isMoreMenuOpen, setMoreMenuOpen] = useState(false);
   const [itemStatus, setItemStatus] = useState(false);
 
   return (
-    <div className={`${classes.todoItemWrap} ${itemStatus && classes.itemIsDone}`} onClick={() => setItemStatus(!itemStatus)} style={{ backgroundColor: backgroundColor }}>
+    <div
+      className={`${classes.todoItemWrap} ${itemStatus && classes.itemIsDone}`}
+      onClick={() => setItemStatus(!itemStatus)}
+      style={{ backgroundColor: backgroundColor }}
+    >
       <span className={classes.time}>{time}</span>
       <div className={classes.taskText}>
-        <Dot size="medium" color={color} style={{ marginRight: 5 }} />
+        <Dot size='medium' color={color} style={{ marginRight: 5 }} />
         <p>{title}</p>
       </div>
       <div>
         <IconButton
           className={classes.moreButton}
-          aria-owns="widget-menu"
-          aria-haspopup="true"
+          aria-owns='widget-menu'
+          aria-haspopup='true'
           onClick={() => setMoreMenuOpen(true)}
           ref={setMoreButtonRef}
         >
           <MoreIcon className={classes.menuItem} />
         </IconButton>
         <Menu
-          id="widget-menu"
+          id='widget-menu'
           open={isMoreMenuOpen}
           anchorEl={moreButtonRef}
           onClose={() => setMoreMenuOpen(false)}
@@ -88,7 +92,7 @@ const ToDoItem = ({ classes, time, title, color, backgroundColor}) => {
         </Menu>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default withStyles(styles)(ToDoItem);

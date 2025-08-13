@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Table,
   TableRow,
@@ -6,18 +6,18 @@ import {
   TableBody,
   TableCell,
   Grid,
-  Box
-} from "@mui/material";
-import useStyles from "./styles";
+  Box,
+} from '@mui/material';
+import useStyles from './styles';
 
 // components
-import Widget from "../../components/Widget";
-import Dot from "../../components/Sidebar/components/Dot";
-import Code from "../../components/Code";
-import { Typography, Button } from "../../components/Wrappers";
+import Widget from '../../components/Widget';
+import Dot from '../../components/Sidebar/components/Dot';
+import Code from '../../components/Code';
+import { Typography, Button } from '../../components/Wrappers';
 
 //Theme
-import Theme from "../../themes/index";
+import Theme from '../../themes/index';
 
 export default function ColorsComp() {
   const classes = useStyles();
@@ -25,11 +25,11 @@ export default function ColorsComp() {
     <>
       <Grid container spacing={6}>
         <Grid item xs={12} md={12}>
-          <Widget title="States Colors" disableWidgetMenu>
+          <Widget title='States Colors' disableWidgetMenu>
             <Typography>
               There is a couple of brand colors that we're using.
             </Typography>
-            <Table className="mb-0">
+            <Table className='mb-0'>
               <TableHead>
                 <TableRow>
                   <TableCell>State</TableCell>
@@ -42,7 +42,7 @@ export default function ColorsComp() {
                 <TableRow>
                   <TableCell>Primary</TableCell>
                   <TableCell>
-                    <Dot color="primary" size="large" />
+                    <Dot color='primary' size='large' />
                   </TableCell>
                   <TableCell>
                     <Code row>{`<Button color="primary">`}</Code>
@@ -50,16 +50,16 @@ export default function ColorsComp() {
                   <TableCell>
                     <Code row>
                       {
-                        Theme[localStorage.getItem("theme")].palette.primary
+                        Theme[localStorage.getItem('theme')].palette.primary
                           .main
                       }
                     </Code>
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell align="left">Secondary</TableCell>
+                  <TableCell align='left'>Secondary</TableCell>
                   <TableCell>
-                    <Dot color="secondary" size="large" />
+                    <Dot color='secondary' size='large' />
                   </TableCell>
                   <TableCell>
                     <Code row>{`<Dot color="secondary">`}</Code>
@@ -67,16 +67,16 @@ export default function ColorsComp() {
                   <TableCell>
                     <Code row>
                       {
-                        Theme[localStorage.getItem("theme")].palette.secondary
+                        Theme[localStorage.getItem('theme')].palette.secondary
                           .main
                       }
                     </Code>
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell align="left">Warning</TableCell>
+                  <TableCell align='left'>Warning</TableCell>
                   <TableCell>
-                    <Dot color="warning" size="large" />
+                    <Dot color='warning' size='large' />
                   </TableCell>
                   <TableCell>
                     <Code row>{`<Typography color="warning">`}</Code>
@@ -84,16 +84,16 @@ export default function ColorsComp() {
                   <TableCell>
                     <Code row>
                       {
-                        Theme[localStorage.getItem("theme")].palette.warning
+                        Theme[localStorage.getItem('theme')].palette.warning
                           .main
                       }
                     </Code>
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell align="left">Success</TableCell>
+                  <TableCell align='left'>Success</TableCell>
                   <TableCell>
-                    <Dot color="success" size="large" />
+                    <Dot color='success' size='large' />
                   </TableCell>
                   <TableCell>
                     <Code row>{`<Notification color="success">`}</Code>
@@ -101,23 +101,23 @@ export default function ColorsComp() {
                   <TableCell>
                     <Code row>
                       {
-                        Theme[localStorage.getItem("theme")].palette.success
+                        Theme[localStorage.getItem('theme')].palette.success
                           .main
                       }
                     </Code>
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell align="left">Info</TableCell>
-                  <TableCell align="right">
-                    <Dot color="info" size="large" />
+                  <TableCell align='left'>Info</TableCell>
+                  <TableCell align='right'>
+                    <Dot color='info' size='large' />
                   </TableCell>
                   <TableCell>
                     <Code row>{`<Icon color="info">`}</Code>
                   </TableCell>
                   <TableCell>
                     <Code row>
-                      {Theme[localStorage.getItem("theme")].palette.info.main}
+                      {Theme[localStorage.getItem('theme')].palette.info.main}
                     </Code>
                   </TableCell>
                 </TableRow>
@@ -126,48 +126,48 @@ export default function ColorsComp() {
           </Widget>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Widget title="Typography Colors" disableWidgetMenu>
+          <Widget title='Typography Colors' disableWidgetMenu>
             <div className={classes.dashedBorder}>
-              <Typography variant="h1" color="primary" className={classes.text}>
+              <Typography variant='h1' color='primary' className={classes.text}>
                 h1. Heading
               </Typography>
-              <Typography variant="h2" color="success" className={classes.text}>
+              <Typography variant='h2' color='success' className={classes.text}>
                 h2. Heading
               </Typography>
               <Typography
-                variant="h3"
-                color="secondary"
+                variant='h3'
+                color='secondary'
                 className={classes.text}
               >
                 h3. Heading
               </Typography>
-              <Typography variant="h4" color="warning" className={classes.text}>
+              <Typography variant='h4' color='warning' className={classes.text}>
                 h4. Heading
               </Typography>
               <Typography
-                variant="h5"
-                color="primary"
-                colorBrightness="light"
+                variant='h5'
+                color='primary'
+                colorBrightness='light'
                 className={classes.text}
               >
                 h5. Heading
               </Typography>
-              <Typography variant="h6" color="info">
+              <Typography variant='h6' color='info'>
                 h6. Heading
               </Typography>
             </div>
           </Widget>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Widget title="Example buttons" disableWidgetMenu inheritHeight>
-            <Box display={"flex"} flexWrap="wrap">
+          <Widget title='Example buttons' disableWidgetMenu inheritHeight>
+            <Box display={'flex'} flexWrap='wrap'>
               <Box mt={1} mr={2}>
-                <Button variant="contained">default</Button>
+                <Button variant='contained'>default</Button>
               </Box>
               <Box mt={1} mr={2}>
                 <Button
-                  color="primary"
-                  variant="contained"
+                  color='primary'
+                  variant='contained'
                   className={classes.button}
                 >
                   primary
@@ -175,8 +175,8 @@ export default function ColorsComp() {
               </Box>
               <Box mt={1} mr={2}>
                 <Button
-                  color="secondary"
-                  variant="contained"
+                  color='secondary'
+                  variant='contained'
                   className={classes.button}
                 >
                   secondary
@@ -184,8 +184,8 @@ export default function ColorsComp() {
               </Box>
               <Box mt={1} mr={2}>
                 <Button
-                  color="warning"
-                  variant="contained"
+                  color='warning'
+                  variant='contained'
                   className={classes.button}
                 >
                   warning
@@ -193,15 +193,15 @@ export default function ColorsComp() {
               </Box>
               <Box mt={1} mr={2}>
                 <Button
-                  color="success"
-                  variant="contained"
+                  color='success'
+                  variant='contained'
                   className={classes.button}
                 >
                   success
                 </Button>
               </Box>
               <Box mt={1} mr={1}>
-                <Button variant="contained" color="info">
+                <Button variant='contained' color='info'>
                   info
                 </Button>
               </Box>

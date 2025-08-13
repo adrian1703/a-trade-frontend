@@ -83,7 +83,7 @@ function Sidebar({ location, structure }) {
         className={classes.sidebarList}
         classes={{ padding: classes.padding }}
       >
-        {structure.map(link => (
+        {structure.map((link) => (
           <SidebarLink
             key={link.id}
             location={location}

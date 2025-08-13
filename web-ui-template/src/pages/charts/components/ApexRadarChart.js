@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { useTheme } from "@mui/styles";
-import ReactApexChart from "react-apexcharts";
+import React, { useState } from 'react';
+import { useTheme } from '@mui/styles';
+import ReactApexChart from 'react-apexcharts';
 
-const themeOptions = theme => {
+const themeOptions = (theme) => {
   return {
     options: {
-      labels: ["January", "February", "March", "April", "May", "June"],
+      labels: ['January', 'February', 'March', 'April', 'May', 'June'],
     },
     series: [
       {
-        name: "Series 1",
+        name: 'Series 1',
         data: [80, 50, 30, 40, 100, 20],
       },
     ],
@@ -17,7 +17,7 @@ const themeOptions = theme => {
       enabled: false,
     },
     stroke: {
-      curve: "smooth",
+      curve: 'smooth',
     },
     chart: {
       toolbar: {
@@ -27,7 +27,7 @@ const themeOptions = theme => {
     legend: {
       show: false,
     },
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
     fill: {
       colors: [theme.palette.primary.light, theme.palette.success.light],
     },
@@ -38,7 +38,7 @@ const themeOptions = theme => {
 const values = {
   series: [
     {
-      name: "Series 1",
+      name: 'Series 1',
       data: [80, 50, 30, 40, 100, 20],
     },
   ],
@@ -51,8 +51,8 @@ const ApexRadarChart = () => {
     <ReactApexChart
       options={themeOptions(theme)}
       series={state.series}
-      type="radar"
-      height="350"
+      type='radar'
+      height='350'
     />
   );
 };

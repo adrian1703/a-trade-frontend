@@ -16,8 +16,8 @@ const styles = (theme) => ({
     padding: '12px 12px 12px 0',
     cursor: 'pointer',
     '&:last-child': {
-      height: 'auto'
-    }
+      height: 'auto',
+    },
   },
   iconBlock: {
     display: 'flex',
@@ -27,7 +27,7 @@ const styles = (theme) => ({
     height: 60,
     '@media (max-width: 425px)': {
       display: 'none',
-    }
+    },
   },
   icon: {
     display: 'flex',
@@ -52,30 +52,35 @@ const styles = (theme) => ({
     fontSize: '0.9rem',
     color: theme.palette.text.secondary,
     display: 'block',
-  }
-})
+  },
+});
 
 const NewsWidget = ({ classes }) => {
   return (
     <ul className={classes.newsList}>
-      {mock.mainData.news.map(item => (
+      {mock.mainData.news.map((item) => (
         <li className={classes.listRow} key={item.title}>
           <div className={classes.iconBlock}>
-            <span className={`${classes.icon}`} style={{ backgroundColor: item.background }}>
+            <span
+              className={`${classes.icon}`}
+              style={{ backgroundColor: item.background }}
+            >
               <i className={`fa fa-${item.icon}`}></i>
             </span>
           </div>
           <div className={classes.newsItemInfo}>
-            <Typography variant="h5"><a className={classes.newsHeader} href="#/app/grid">{item.title}</a></Typography>
-            <div>
-              {item.description}
-            </div>
+            <Typography variant='h5'>
+              <a className={classes.newsHeader} href='#/app/grid'>
+                {item.title}
+              </a>
+            </Typography>
+            <div>{item.description}</div>
             <time className={classes.timeBlock}>{item.date}</time>
           </div>
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
 export default withStyles(styles)(NewsWidget);

@@ -82,17 +82,36 @@ const BreadCrumbs = () => {
   };
 
   const date = () => {
-    let dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
+    let dayNames = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
     ];
-    let d = new Date()
-    let year = d.getFullYear()
-    let month = d.getMonth()
-    let date = d.getDate()
-    let day = d.getDay() + 1
-    return `${date} ${monthNames[month]} ${year}, ${dayNames[day - 1]}`
-  }
+    const monthNames = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+    let d = new Date();
+    let year = d.getFullYear();
+    let month = d.getMonth();
+    let date = d.getDate();
+    let day = d.getDay() + 1;
+    return `${date} ${monthNames[month]} ${year}, ${dayNames[day - 1]}`;
+  };
 
   function a11yProps(index) {
     return {

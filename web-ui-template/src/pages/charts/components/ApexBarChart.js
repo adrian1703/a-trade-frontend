@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { useTheme } from "@mui/styles";
-import ReactApexChart from "react-apexcharts";
+import React, { useState } from 'react';
+import { useTheme } from '@mui/styles';
+import ReactApexChart from 'react-apexcharts';
 
-const themeOptions = theme => {
+const themeOptions = (theme) => {
   return {
     plotOptions: {
       bar: {
@@ -14,20 +14,20 @@ const themeOptions = theme => {
     },
     xaxis: {
       categories: [
-        "South Korea",
-        "Canada",
-        "United Kingdom",
-        "Netherlands",
-        "Italy",
-        "France",
-        "Japan",
-        "United States",
-        "China",
-        "Germany",
+        'South Korea',
+        'Canada',
+        'United Kingdom',
+        'Netherlands',
+        'Italy',
+        'France',
+        'Japan',
+        'United States',
+        'China',
+        'Germany',
       ],
     },
     stroke: {
-      curve: "smooth",
+      curve: 'smooth',
     },
     chart: {
       toolbar: {
@@ -37,7 +37,7 @@ const themeOptions = theme => {
     legend: {
       show: false,
     },
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
     fill: {
       colors: [theme.palette.primary.main],
     },
@@ -59,8 +59,8 @@ const ApexBarChart = () => {
     <ReactApexChart
       options={themeOptions(theme)}
       series={state.series}
-      type="bar"
-      height="350"
+      type='bar'
+      height='350'
     />
   );
 };

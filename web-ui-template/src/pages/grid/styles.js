@@ -1,29 +1,29 @@
-import { makeStyles } from "@mui/styles";
+import { makeStyles } from '@mui/styles';
 
-export default makeStyles(theme => ({
+export default makeStyles((theme) => ({
   paperItem: {
-    textAlign: "center",
+    textAlign: 'center',
     padding: theme.spacing(2),
-    color: "#f3f3f3"
+    color: '#f3f3f3',
   },
   headBold: {
-    fontWeight: 700
+    fontWeight: 700,
   },
   wrapFix: {
-    whiteSpace: "pre"
+    whiteSpace: 'pre',
   },
   paperMargin: {
-    margin: 12
+    margin: 12,
   },
   fullHeightBody: {
-    display: "flex",
+    display: 'flex',
     flexGrow: 1,
-    flexDirection: "column",
-    justifyContent: "space-between"
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   card: {
-    minHeight: "100%",
-    display: "flex",
-    flexDirection: "column"
-  }
+    minHeight: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
 }));

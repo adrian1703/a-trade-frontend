@@ -1,15 +1,15 @@
-import React from "react";
-import { Grid, Box, LinearProgress } from "@mui/material";
+import React from 'react';
+import { Grid, Box, LinearProgress } from '@mui/material';
 
 // components
-import Widget from "../../components/Widget";
-import { CircularProgress } from "../../components/Wrappers";
+import Widget from '../../components/Widget';
+import { CircularProgress } from '../../components/Wrappers';
 
 export default function ProgressComp() {
   const [completed, setCompleted] = React.useState(0);
   React.useEffect(() => {
     function progress() {
-      setCompleted(oldCompleted => {
+      setCompleted((oldCompleted) => {
         if (oldCompleted === 100) {
           return 0;
         }
@@ -26,53 +26,53 @@ export default function ProgressComp() {
     <>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <Widget title="Circular Indeterminate" disableWidgetMenu>
-            <Box my={3} display="flex" flexWrap="wrap" justifyContent="center">
+          <Widget title='Circular Indeterminate' disableWidgetMenu>
+            <Box my={3} display='flex' flexWrap='wrap' justifyContent='center'>
               <Box mt={1} mr={2}>
                 <CircularProgress />
               </Box>
               <Box mt={1} mr={2}>
-                <CircularProgress color="secondary" />
+                <CircularProgress color='secondary' />
               </Box>
               <Box mt={1} mr={2}>
-                <CircularProgress color="warning" />
+                <CircularProgress color='warning' />
               </Box>
               <Box mt={1} mr={2}>
-                <CircularProgress color="success" />
+                <CircularProgress color='success' />
               </Box>
               <Box mt={1} mr={2}>
-                <CircularProgress color="info" />
+                <CircularProgress color='info' />
               </Box>
             </Box>
           </Widget>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Widget title="Linear Indeterminate" disableWidgetMenu>
+          <Widget title='Linear Indeterminate' disableWidgetMenu>
             <Box
               my={3}
-              display="flex"
-              flexWrap="wrap"
-              alignItems="center"
-              flexDirection="column"
+              display='flex'
+              flexWrap='wrap'
+              alignItems='center'
+              flexDirection='column'
             >
-              <Box mt={1} mr={2} width="100%">
+              <Box mt={1} mr={2} width='100%'>
                 <LinearProgress />
               </Box>
-              <Box mt={1} mr={2} width="100%">
-                <LinearProgress color="secondary" />
+              <Box mt={1} mr={2} width='100%'>
+                <LinearProgress color='secondary' />
               </Box>
-              <Box mt={1} mr={2} width="100%">
-                <LinearProgress color="warning" />
+              <Box mt={1} mr={2} width='100%'>
+                <LinearProgress color='warning' />
               </Box>
-              <Box mt={1} mr={2} width="100%">
-                <LinearProgress color="success" />
+              <Box mt={1} mr={2} width='100%'>
+                <LinearProgress color='success' />
               </Box>
-              <Box mt={1} mr={2} width="100%">
-                <LinearProgress color="info" />
+              <Box mt={1} mr={2} width='100%'>
+                <LinearProgress color='info' />
                 <br />
                 <LinearProgress
-                  color="info"
-                  variant="determinate"
+                  color='info'
+                  variant='determinate'
                   value={completed}
                 />
               </Box>

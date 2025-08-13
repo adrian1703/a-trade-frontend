@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import FormErrors from 'components/FormItems/formErrors';
 import { FastField } from 'formik';
@@ -14,7 +14,7 @@ const InputFormItem = (props) => {
     autoComplete,
     inputProps,
     errorMessage,
-    multiline
+    multiline,
   } = props;
 
   const { label } = schema[name];

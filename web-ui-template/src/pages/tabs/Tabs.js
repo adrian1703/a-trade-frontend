@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Grid,
   Box,
@@ -7,27 +7,27 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  AppBar
-} from "@mui/material";
-import SwipeableViews from "react-swipeable-views";
-import { useTheme } from "@mui/styles";
+  AppBar,
+} from '@mui/material';
+import SwipeableViews from 'react-swipeable-views';
+import { useTheme } from '@mui/styles';
 import {
   Phone as PhoneIcon,
-  ExpandMore as ExpandMoreIcon
-} from "@mui/icons-material";
+  ExpandMore as ExpandMoreIcon,
+} from '@mui/icons-material';
 
 // components
-import Widget from "../../components/Widget";
-import { Typography, Button } from "../../components/Wrappers";
-import useStyles from "./styles";
+import Widget from '../../components/Widget';
+import { Typography, Button } from '../../components/Wrappers';
+import useStyles from './styles';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
     <Typography
-      component="div"
-      role="tabpanel"
+      component='div'
+      role='tabpanel'
       hidden={value !== index}
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
@@ -41,7 +41,7 @@ function TabPanel(props) {
 function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
-    "aria-controls": `full-width-tabpanel-${index}`
+    'aria-controls': `full-width-tabpanel-${index}`,
   };
 }
 
@@ -71,23 +71,23 @@ export default function TabsComp() {
     <div>
       <Grid container spacing={6}>
         <Grid item md={6}>
-          <Widget title="Tabs Example" disableWidgetMenu inheritHeight>
-            <AppBar position="static" color="default" style={{ marginTop: 10 }}>
+          <Widget title='Tabs Example' disableWidgetMenu inheritHeight>
+            <AppBar position='static' color='default' style={{ marginTop: 10 }}>
               <Tabs
                 value={value}
                 onChange={handleChange}
-                indicatorColor="primary"
-                textColor="primary"
-                variant="fullWidth"
-                aria-label="full width tabs example"
+                indicatorColor='primary'
+                textColor='primary'
+                variant='fullWidth'
+                aria-label='full width tabs example'
               >
-                <Tab label="Item One" {...a11yProps(0)} />
-                <Tab label="Item Two" {...a11yProps(1)} />
-                <Tab label="Item Three" {...a11yProps(2)} />
+                <Tab label='Item One' {...a11yProps(0)} />
+                <Tab label='Item Two' {...a11yProps(1)} />
+                <Tab label='Item Three' {...a11yProps(2)} />
               </Tabs>
             </AppBar>
             <SwipeableViews
-              axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+              axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
               index={value}
               onChangeIndex={handleChangeIndex}
             >
@@ -104,14 +104,14 @@ export default function TabsComp() {
                 startups and ideas. If you have an idea right away after it
                 appears in your mind you should go and make a first step to
                 implement it.
-                <Box display="flex" justifyContent={"flex-end"}>
+                <Box display='flex' justifyContent={'flex-end'}>
                   <Box m={1}>
-                    <Button variant={"contained"} color={"secondary"}>
+                    <Button variant={'contained'} color={'secondary'}>
                       Cancel
                     </Button>
                   </Box>
                   <Box m={1}>
-                    <Button variant={"contained"} color={"primary"}>
+                    <Button variant={'contained'} color={'primary'}>
                       Some button
                     </Button>
                   </Box>
@@ -136,27 +136,27 @@ export default function TabsComp() {
         </Grid>
 
         <Grid item md={6}>
-          <Widget title="Icons Tabs" disableWidgetMenu inheritHeight>
-            <AppBar position="static" color="default" style={{ marginTop: 10 }}>
+          <Widget title='Icons Tabs' disableWidgetMenu inheritHeight>
+            <AppBar position='static' color='default' style={{ marginTop: 10 }}>
               <Tabs
                 value={iconValue}
                 onChange={handleChangeIconTab}
-                indicatorColor="primary"
-                textColor="primary"
-                variant="fullWidth"
-                aria-label="full width tabs example"
+                indicatorColor='primary'
+                textColor='primary'
+                variant='fullWidth'
+                aria-label='full width tabs example'
               >
-                <Tab label="Item One" icon={<PhoneIcon />} {...a11yProps(0)} />
-                <Tab label="Item Two" icon={<PhoneIcon />} {...a11yProps(1)} />
+                <Tab label='Item One' icon={<PhoneIcon />} {...a11yProps(0)} />
+                <Tab label='Item Two' icon={<PhoneIcon />} {...a11yProps(1)} />
                 <Tab
-                  label="Item Three"
+                  label='Item Three'
                   icon={<PhoneIcon />}
                   {...a11yProps(2)}
                 />
               </Tabs>
             </AppBar>
             <SwipeableViews
-              axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+              axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
               index={iconValue}
               onChangeIndex={handleChangeIndexIconTab}
             >
@@ -173,14 +173,14 @@ export default function TabsComp() {
                 startups and ideas. If you have an idea right away after it
                 appears in your mind you should go and make a first step to
                 implement it.
-                <Box display="flex" justifyContent={"flex-end"}>
+                <Box display='flex' justifyContent={'flex-end'}>
                   <Box m={1}>
-                    <Button variant={"contained"} color={"secondary"}>
+                    <Button variant={'contained'} color={'secondary'}>
                       Cancel
                     </Button>
                   </Box>
                   <Box m={1}>
-                    <Button variant={"contained"} color={"primary"}>
+                    <Button variant={'contained'} color={'primary'}>
                       Some button
                     </Button>
                   </Box>
@@ -205,15 +205,15 @@ export default function TabsComp() {
         </Grid>
         <Grid item md={6}>
           <Widget
-            title="Expansion Panel Example"
+            title='Expansion Panel Example'
             disableWidgetMenu
             inheritHeight
           >
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls='panel1a-content'
+                id='panel1a-header'
               >
                 <Typography>Expansion Panel 1</Typography>
               </AccordionSummary>
@@ -228,8 +228,8 @@ export default function TabsComp() {
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2a-content"
-                id="panel2a-header"
+                aria-controls='panel2a-content'
+                id='panel2a-header'
               >
                 <Typography>Expansion Panel 2</Typography>
               </AccordionSummary>
@@ -244,8 +244,8 @@ export default function TabsComp() {
             <Accordion disabled>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel3a-content"
-                id="panel3a-header"
+                aria-controls='panel3a-content'
+                id='panel3a-header'
               >
                 <Typography>Disabled Expansion Panel</Typography>
               </AccordionSummary>
@@ -254,15 +254,15 @@ export default function TabsComp() {
         </Grid>
         <Grid item md={6}>
           <Widget
-            title="Customize Expansion Panel Example"
+            title='Customize Expansion Panel Example'
             disableWidgetMenu
             inheritHeight
           >
             <Accordion classes={{ root: classes.expansion }}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls='panel1a-content'
+                id='panel1a-header'
               >
                 <Typography>Expansion Panel 1</Typography>
               </AccordionSummary>
@@ -277,8 +277,8 @@ export default function TabsComp() {
             <Accordion classes={{ root: classes.expansion }}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2a-content"
-                id="panel2a-header"
+                aria-controls='panel2a-content'
+                id='panel2a-header'
               >
                 <Typography>Expansion Panel 2</Typography>
               </AccordionSummary>
@@ -293,8 +293,8 @@ export default function TabsComp() {
             <Accordion disabled>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel3a-content"
-                id="panel3a-header"
+                aria-controls='panel3a-content'
+                id='panel3a-header'
               >
                 <Typography>Disabled Expansion Panel</Typography>
               </AccordionSummary>

@@ -10,7 +10,7 @@ function TabPanel(props) {
 
   return (
     <div
-      role="tabpanel"
+      role='tabpanel'
       hidden={value !== index}
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
@@ -82,7 +82,8 @@ const styles = (theme) => ({
     },
     flexGrow: 1,
     '& .react-swipeable-view-container': {
-      transition: 'transform 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s !important'
+      transition:
+        'transform 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s !important',
     },
   },
   padding: {
@@ -96,21 +97,20 @@ const styles = (theme) => ({
   },
   folderWrapper: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
-})
+});
 
 function CustomizedTabs({ classes }) {
-
   const [index, setIndex] = React.useState(0);
 
   const handleChange = (event, index) => {
-    setIndex(index)
-  }
+    setIndex(index);
+  };
 
   const handleChangeIndex = (index) => {
-    setIndex(index)
-  }
+    setIndex(index);
+  };
 
   const Todos = [
     { color: '#FFC35F', time: '10.20', title: 'Call conference with a New' },
@@ -133,17 +133,14 @@ function CustomizedTabs({ classes }) {
     { color: '#3CD4A0', time: '13.20', title: 'Call conference in New-York' },
     { color: '#FFC35F', time: '15.20', title: 'Development of the new Widget' },
     { color: '#536DFE', time: '16.00', title: 'Code review and refactoring' },
-  ]
+  ];
 
   return (
     <div className={classes.root}>
-      <AntTabs
-        value={index}
-        onChange={handleChange}
-      >
-        <AntTab value={0} label="Today" />
-        <AntTab value={1} label="This week" />
-        <AntTab value={2} label="This month" />
+      <AntTabs value={index} onChange={handleChange}>
+        <AntTab value={0} label='Today' />
+        <AntTab value={1} label='This week' />
+        <AntTab value={2} label='This month' />
       </AntTabs>
       <SwipeableViews
         index={index}
@@ -152,17 +149,32 @@ function CustomizedTabs({ classes }) {
       >
         <TabPanel style={{ padding: 0 }}>
           {Todos.map((item, index) => (
-            <ToDoItem key={index} title={item.title} color={item.color} time={item.time} />
+            <ToDoItem
+              key={index}
+              title={item.title}
+              color={item.color}
+              time={item.time}
+            />
           ))}
         </TabPanel>
         <TabPanel>
           {Todos.map((item, index) => (
-            <ToDoItem key={index} color={item.color} time={item.time} title={item.title} />
+            <ToDoItem
+              key={index}
+              color={item.color}
+              time={item.time}
+              title={item.title}
+            />
           ))}
         </TabPanel>
         <TabPanel>
           {Todos.map((item, index) => (
-            <ToDoItem key={index} color={item.color} time={item.time} title={item.title} />
+            <ToDoItem
+              key={index}
+              color={item.color}
+              time={item.time}
+              title={item.title}
+            />
           ))}
         </TabPanel>
       </SwipeableViews>

@@ -8,8 +8,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormLabel from '@mui/material/FormLabel';
 
 const SwitchFormItem = (props) => {
-  const { name, schema, hint, errorMessage } =
-    props;
+  const { name, schema, hint, errorMessage } = props;
 
   const { label } = schema[name];
 

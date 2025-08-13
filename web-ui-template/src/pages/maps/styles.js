@@ -1,10 +1,10 @@
-import { makeStyles } from "@mui/styles";
+import { makeStyles } from '@mui/styles';
 
-export default makeStyles(theme => ({
+export default makeStyles((theme) => ({
   mapContainer: {
-    height: "100%",
+    height: '100%',
   },
   vectorContainer: {
-    margin: -theme.spacing(3)
-  }
+    margin: -theme.spacing(3),
+  },
 }));

@@ -16,14 +16,8 @@ import FormValidations from 'components/FormItems/formValidations';
 import Widget from 'components/Widget';
 
 const UsersForm = (props) => {
-  const {
-    isEditing,
-    isProfile,
-    findLoading,
-    record,
-    onSubmit,
-    onCancel,
-  } = props;
+  const { isEditing, isProfile, findLoading, record, onSubmit, onCancel } =
+    props;
 
   const iniValues = () => {
     return IniValues(usersFields, record || {});

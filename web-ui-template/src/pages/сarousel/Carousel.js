@@ -1,86 +1,86 @@
-import React from "react";
-import { Grid, MobileStepper } from "@material-ui/core";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
-import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
+import React from 'react';
+import { Grid, MobileStepper } from '@material-ui/core';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
 
 //images
-import img1 from "../../images/1.jpg";
-import img2 from "../../images/2.jpg";
-import img3 from "../../images/3.jpg";
+import img1 from '../../images/1.jpg';
+import img2 from '../../images/2.jpg';
+import img3 from '../../images/3.jpg';
 
 //components
-import { Button, Typography } from "../../components/Wrappers";
-import Widget from "../../components/Widget";
+import { Button, Typography } from '../../components/Wrappers';
+import Widget from '../../components/Widget';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const places1 = [
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath: img1
+    label: 'San Francisco – Oakland Bay Bridge, United States',
+    imgPath: img1,
   },
   {
-    label: "Alaska - Glacier Bay National Park, United States",
-    imgPath: img2
+    label: 'Alaska - Glacier Bay National Park, United States',
+    imgPath: img2,
   },
   {
-    label: "Bali, Indonesia",
-    imgPath: img3
-  }
+    label: 'Bali, Indonesia',
+    imgPath: img3,
+  },
 ];
 
 const places2 = [
   {
-    label: "Alaska - Glacier Bay National Park, United States",
-    imgPath: img2
+    label: 'Alaska - Glacier Bay National Park, United States',
+    imgPath: img2,
   },
   {
-    label: "Bali, Indonesia",
-    imgPath: img3
+    label: 'Bali, Indonesia',
+    imgPath: img3,
   },
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath: img1
-  }
+    label: 'San Francisco – Oakland Bay Bridge, United States',
+    imgPath: img1,
+  },
 ];
 
 const places3 = [
   {
-    label: "Bali, Indonesia",
-    imgPath: img3
+    label: 'Bali, Indonesia',
+    imgPath: img3,
   },
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath: img1
+    label: 'San Francisco – Oakland Bay Bridge, United States',
+    imgPath: img1,
   },
   {
-    label: "Alaska - Glacier Bay National Park, United States",
-    imgPath: img2
-  }
+    label: 'Alaska - Glacier Bay National Park, United States',
+    imgPath: img2,
+  },
 ];
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 400,
-    flexGrow: 1
+    flexGrow: 1,
   },
   header: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default
+    backgroundColor: theme.palette.background.default,
   },
   img: {
     height: 255,
-    display: "block",
-    maxWidth: "100%",
-    overflow: "hidden",
-    width: "100%"
-  }
+    display: 'block',
+    maxWidth: '100%',
+    overflow: 'hidden',
+    width: '100%',
+  },
 }));
 
 function Carousel() {
@@ -90,14 +90,14 @@ function Carousel() {
   const maxSteps = places1.length;
 
   const handleNext = () => {
-    setActiveStep(prevActiveStep => prevActiveStep + 1);
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
 
   const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleStepChange = step => {
+  const handleStepChange = (step) => {
     setActiveStep(step);
   };
 
@@ -112,7 +112,7 @@ function Carousel() {
           noBodyPadding
         >
           <AutoPlaySwipeableViews
-            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={activeStep}
             onChangeIndex={handleStepChange}
             enableMouseEvents
@@ -131,17 +131,17 @@ function Carousel() {
           </AutoPlaySwipeableViews>
           <MobileStepper
             steps={maxSteps}
-            position="static"
-            variant="text"
+            position='static'
+            variant='text'
             activeStep={activeStep}
             nextButton={
               <Button
-                size="small"
+                size='small'
                 onClick={handleNext}
                 disabled={activeStep === maxSteps - 1}
               >
                 Next
-                {theme.direction === "rtl" ? (
+                {theme.direction === 'rtl' ? (
                   <KeyboardArrowLeft />
                 ) : (
                   <KeyboardArrowRight />
@@ -150,11 +150,11 @@ function Carousel() {
             }
             backButton={
               <Button
-                size="small"
+                size='small'
                 onClick={handleBack}
                 disabled={activeStep === 0}
               >
-                {theme.direction === "rtl" ? (
+                {theme.direction === 'rtl' ? (
                   <KeyboardArrowRight />
                 ) : (
                   <KeyboardArrowLeft />
@@ -174,7 +174,7 @@ function Carousel() {
           noBodyPadding
         >
           <AutoPlaySwipeableViews
-            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={activeStep}
             onChangeIndex={handleStepChange}
             enableMouseEvents
@@ -193,17 +193,17 @@ function Carousel() {
           </AutoPlaySwipeableViews>
           <MobileStepper
             steps={maxSteps}
-            position="static"
-            variant="dots"
+            position='static'
+            variant='dots'
             activeStep={activeStep}
             nextButton={
               <Button
-                size="small"
+                size='small'
                 onClick={handleNext}
                 disabled={activeStep === maxSteps - 1}
               >
                 Next
-                {theme.direction === "rtl" ? (
+                {theme.direction === 'rtl' ? (
                   <KeyboardArrowLeft />
                 ) : (
                   <KeyboardArrowRight />
@@ -212,11 +212,11 @@ function Carousel() {
             }
             backButton={
               <Button
-                size="small"
+                size='small'
                 onClick={handleBack}
                 disabled={activeStep === 0}
               >
-                {theme.direction === "rtl" ? (
+                {theme.direction === 'rtl' ? (
                   <KeyboardArrowRight />
                 ) : (
                   <KeyboardArrowLeft />
@@ -236,7 +236,7 @@ function Carousel() {
           noBodyPadding
         >
           <AutoPlaySwipeableViews
-            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={activeStep}
             onChangeIndex={handleStepChange}
             enableMouseEvents
@@ -255,17 +255,17 @@ function Carousel() {
           </AutoPlaySwipeableViews>
           <MobileStepper
             steps={maxSteps}
-            position="static"
-            variant="progress"
+            position='static'
+            variant='progress'
             activeStep={activeStep}
             nextButton={
               <Button
-                size="small"
+                size='small'
                 onClick={handleNext}
                 disabled={activeStep === maxSteps - 1}
               >
                 Next
-                {theme.direction === "rtl" ? (
+                {theme.direction === 'rtl' ? (
                   <KeyboardArrowLeft />
                 ) : (
                   <KeyboardArrowRight />
@@ -274,11 +274,11 @@ function Carousel() {
             }
             backButton={
               <Button
-                size="small"
+                size='small'
                 onClick={handleBack}
                 disabled={activeStep === 0}
               >
-                {theme.direction === "rtl" ? (
+                {theme.direction === 'rtl' ? (
                   <KeyboardArrowRight />
                 ) : (
                   <KeyboardArrowLeft />

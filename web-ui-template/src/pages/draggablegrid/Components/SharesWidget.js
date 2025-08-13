@@ -8,7 +8,6 @@ import a2 from '../../../images/grid/a2.jpg';
 import a3 from '../../../images/grid/a3.jpg';
 import a4 from '../../../images/grid/a4.jpg';
 
-
 const styles = (theme) => ({
   buttonsGroup: {
     display: 'flex',
@@ -53,49 +52,48 @@ const styles = (theme) => ({
   dot: {
     '@media (max-width: 320px)': {
       display: 'none',
-    }
-  }
-})
+    },
+  },
+});
 
 const SharesWidget = ({ classes }) => {
-
   const shares = [
     {
       img: a1,
       name: 'Maikel Basso',
       comment: 'about 2 mins ago',
-      type: '#FFC35F'
+      type: '#FFC35F',
     },
     {
       img: a2,
       name: 'Ianus Arendse',
       comment: 'about 42 mins ago',
-      type: '#536DFE'
+      type: '#536DFE',
     },
     {
       img: a3,
       name: 'Valdemar Landau',
       comment: 'one hour ago',
-      type: '#3CD4A0'
+      type: '#3CD4A0',
     },
     {
       img: a4,
       name: 'Rick Teagan',
       comment: '3 hours ago',
-      type: '#FF5C93'
-    }
-  ]
+      type: '#FF5C93',
+    },
+  ];
 
   // function updatedData = (data) => {
 
   // }
   return (
     <div className={classes.buttonsGroup}>
-      {shares.map(item => (
+      {shares.map((item) => (
         <div className={classes.button} key={item.name}>
           <div className={classes.userInfo}>
             <span>
-              <img className={classes.img} src={item.img} alt="..." />
+              <img className={classes.img} src={item.img} alt='...' />
             </span>
             <div>
               <div className={classes.userName}>{item.name}</div>
@@ -103,12 +101,12 @@ const SharesWidget = ({ classes }) => {
             </div>
           </div>
           <div className={classes.dot}>
-            <Dot size='large' color={item.type}/>
+            <Dot size='large' color={item.type} />
           </div>
-        </div>                
+        </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default withStyles(styles)(SharesWidget)
+export default withStyles(styles)(SharesWidget);

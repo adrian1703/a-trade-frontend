@@ -24,7 +24,7 @@ import useStyles2 from '../../styles';
 
 // components
 import Dot from '../Dot';
-import {Button, Badge, Link as LinkMaterial} from '../../../Wrappers';
+import { Button, Badge, Link as LinkMaterial } from '../../../Wrappers';
 
 export default function SidebarLink({
   link,

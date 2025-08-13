@@ -54,10 +54,13 @@ const Documentation = (props) => {
             justifyContent='space-between'
             alignItems='center'
           >
-
             {/* eslint-disable-next-line array-callback-return */}
             {structure.map((c) => {
-              if (!c.children && window.location.hash.includes(c.link) && c.link) {
+              if (
+                !c.children &&
+                window.location.hash.includes(c.link) &&
+                c.link
+              ) {
                 return (
                   <Box display='flex' alignItems='center' key={c.id}>
                     <Breadcrumbs aria-label='breadcrumb'>

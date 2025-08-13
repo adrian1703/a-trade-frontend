@@ -17,7 +17,7 @@ export default makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   linkActive: {
     backgroundColor: theme.palette.background.default,

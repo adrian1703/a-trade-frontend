@@ -19,8 +19,8 @@ const styles = (theme) => ({
     },
     '& span': {
       fontSize: 13,
-      opacity: .6,
-    }
+      opacity: 0.6,
+    },
   },
   mediaIconsWrapper: {
     display: 'flex',
@@ -28,18 +28,18 @@ const styles = (theme) => ({
     width: '100%',
     '@media (max-width: 1280px)': {
       marginTop: 40,
-    }
+    },
   },
   valueLabel: {
     marginBottom: '-8px',
-  }
-})
+  },
+});
 
 const MediaBlock = ({ classes }) => {
   return (
     <div className={classes.mediaIconsWrapper}>
       <div className={classes.mediaIndicator}>
-        <DocIcon/>
+        <DocIcon />
         <strong className={classes.valueLabel}>194</strong>
         <span>Posts</span>
       </div>
@@ -59,7 +59,7 @@ const MediaBlock = ({ classes }) => {
         <span>Following</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default withStyles(styles)(MediaBlock);

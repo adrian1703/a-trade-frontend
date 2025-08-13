@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Typography, Grid, Tabs, Tab, Paper } from "@mui/material";
-import * as Icons from "@mui/icons-material";
-import Widget from "../../components/Widget";
+import React, { useState } from 'react';
+import { Typography, Grid, Tabs, Tab, Paper } from '@mui/material';
+import * as Icons from '@mui/icons-material';
+import Widget from '../../components/Widget';
 // styles
-import useStyles from "./styles";
+import useStyles from './styles';
 
 // icons sets
-import "font-awesome/css/font-awesome.min.css";
+import 'font-awesome/css/font-awesome.min.css';
 
 export default function IconsPage() {
   let classes = useStyles();
@@ -18,14 +18,14 @@ export default function IconsPage() {
     <>
       <Paper className={classes.iconsContainer}>
         <Tabs
-          indicatorColor="primary"
-          textColor="primary"
+          indicatorColor='primary'
+          textColor='primary'
           value={activeTabId}
           onChange={(e, id) => setActiveTabId(id)}
           className={classes.iconsBar}
         >
-          <Tab label="Material Icons" classes={{ root: classes.tab }} />
-          <Tab label="Font Awesome" classes={{ root: classes.tab }} />
+          <Tab label='Material Icons' classes={{ root: classes.tab }} />
+          <Tab label='Font Awesome' classes={{ root: classes.tab }} />
         </Tabs>
         {activeTabId === 0 && (
           <Widget>
@@ -12456,7 +12456,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-bed" />
+                <i className='fa fa-bed' />
                 <Typography className={classes.materialIconText}>
                   Bed
                 </Typography>
@@ -12469,7 +12469,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-bank" />
+                <i className='fa fa-bank' />
                 <Typography className={classes.materialIconText}>
                   Bank
                 </Typography>
@@ -12482,7 +12482,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-behance" />
+                <i className='fa fa-behance' />
                 <Typography className={classes.materialIconText}>
                   Behance
                 </Typography>
@@ -12495,7 +12495,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-behance-square" />
+                <i className='fa fa-behance-square' />
                 <Typography className={classes.materialIconText}>
                   Behance-square
                 </Typography>
@@ -12508,7 +12508,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-bomb" />
+                <i className='fa fa-bomb' />
                 <Typography className={classes.materialIconText}>
                   Bomb
                 </Typography>
@@ -12521,7 +12521,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-building" />
+                <i className='fa fa-building' />
                 <Typography className={classes.materialIconText}>
                   Building
                 </Typography>
@@ -12534,7 +12534,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-cab" />
+                <i className='fa fa-cab' />
                 <Typography className={classes.materialIconText}>
                   Cab
                 </Typography>
@@ -12547,7 +12547,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-car" />
+                <i className='fa fa-car' />
                 <Typography className={classes.materialIconText}>
                   Car
                 </Typography>
@@ -12560,7 +12560,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-child" />
+                <i className='fa fa-child' />
                 <Typography className={classes.materialIconText}>
                   Child
                 </Typography>
@@ -12573,7 +12573,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-circle-o-notch" />
+                <i className='fa fa-circle-o-notch' />
                 <Typography className={classes.materialIconText}>
                   Circle-o-notch
                 </Typography>
@@ -12586,7 +12586,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-circle-thin" />
+                <i className='fa fa-circle-thin' />
                 <Typography className={classes.materialIconText}>
                   Circle-thin
                 </Typography>
@@ -12599,7 +12599,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-codepen" />
+                <i className='fa fa-codepen' />
                 <Typography className={classes.materialIconText}>
                   Codepen
                 </Typography>
@@ -12612,7 +12612,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-cube" />
+                <i className='fa fa-cube' />
                 <Typography className={classes.materialIconText}>
                   Cube
                 </Typography>
@@ -12625,7 +12625,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-cubes" />
+                <i className='fa fa-cubes' />
                 <Typography className={classes.materialIconText}>
                   Cubes
                 </Typography>
@@ -12638,7 +12638,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-database" />
+                <i className='fa fa-database' />
                 <Typography className={classes.materialIconText}>
                   Database
                 </Typography>
@@ -12651,7 +12651,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-delicious" />
+                <i className='fa fa-delicious' />
                 <Typography className={classes.materialIconText}>
                   Delicious
                 </Typography>
@@ -12664,7 +12664,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-deviantart" />
+                <i className='fa fa-deviantart' />
                 <Typography className={classes.materialIconText}>
                   Deviantart
                 </Typography>
@@ -12677,7 +12677,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-digg" />
+                <i className='fa fa-digg' />
                 <Typography className={classes.materialIconText}>
                   Digg
                 </Typography>
@@ -12690,7 +12690,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-drupal" />
+                <i className='fa fa-drupal' />
                 <Typography className={classes.materialIconText}>
                   Drupal
                 </Typography>
@@ -12703,7 +12703,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-empire" />
+                <i className='fa fa-empire' />
                 <Typography className={classes.materialIconText}>
                   Empire
                 </Typography>
@@ -12716,7 +12716,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-envelope-square" />
+                <i className='fa fa-envelope-square' />
                 <Typography className={classes.materialIconText}>
                   Envelope-square
                 </Typography>
@@ -12729,7 +12729,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-fax" />
+                <i className='fa fa-fax' />
                 <Typography className={classes.materialIconText}>
                   Fax
                 </Typography>
@@ -12742,7 +12742,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-archive-o" />
+                <i className='fa fa-file-archive-o' />
                 <Typography className={classes.materialIconText}>
                   File-archive-o
                 </Typography>
@@ -12755,7 +12755,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-audio-o" />
+                <i className='fa fa-file-audio-o' />
                 <Typography className={classes.materialIconText}>
                   File-audio-o
                 </Typography>
@@ -12768,7 +12768,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-code-o" />
+                <i className='fa fa-file-code-o' />
                 <Typography className={classes.materialIconText}>
                   Аile-code-o
                 </Typography>
@@ -12781,7 +12781,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-excel-o" />
+                <i className='fa fa-file-excel-o' />
                 <Typography className={classes.materialIconText}>
                   Аile-excel-o
                 </Typography>
@@ -12794,7 +12794,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-image-o" />
+                <i className='fa fa-file-image-o' />
                 <Typography className={classes.materialIconText}>
                   File-image-o
                 </Typography>
@@ -12807,7 +12807,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-movie-o" />
+                <i className='fa fa-file-movie-o' />
                 <Typography className={classes.materialIconText}>
                   Аile-movie-o
                 </Typography>
@@ -12820,7 +12820,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-pdf-o" />
+                <i className='fa fa-file-pdf-o' />
                 <Typography className={classes.materialIconText}>
                   File-pdf-o
                 </Typography>
@@ -12833,7 +12833,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-photo-o" />
+                <i className='fa fa-file-photo-o' />
                 <Typography className={classes.materialIconText}>
                   File-photo-o
                 </Typography>
@@ -12846,7 +12846,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-picture-o" />
+                <i className='fa fa-file-picture-o' />
                 <Typography className={classes.materialIconText}>
                   File-picture-o
                 </Typography>
@@ -12859,7 +12859,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-powerpoint-o" />
+                <i className='fa fa-file-powerpoint-o' />
                 <Typography className={classes.materialIconText}>
                   File-powerpoint-o
                 </Typography>
@@ -12872,7 +12872,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-sound-o" />
+                <i className='fa fa-file-sound-o' />
                 <Typography className={classes.materialIconText}>
                   File-sound-o
                 </Typography>
@@ -12885,7 +12885,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-video-o" />
+                <i className='fa fa-file-video-o' />
                 <Typography className={classes.materialIconText}>
                   File-video-o
                 </Typography>
@@ -12898,7 +12898,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-word-o" />
+                <i className='fa fa-file-word-o' />
                 <Typography className={classes.materialIconText}>
                   File-word-o
                 </Typography>
@@ -12911,7 +12911,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-file-zip-o" />
+                <i className='fa fa-file-zip-o' />
                 <Typography className={classes.materialIconText}>
                   File-zip-o
                 </Typography>
@@ -12924,7 +12924,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-ge" />
+                <i className='fa fa-ge' />
                 <Typography className={classes.materialIconText}>Ge</Typography>
               </Grid>
               <Grid
@@ -12935,7 +12935,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-git" />
+                <i className='fa fa-git' />
                 <Typography className={classes.materialIconText}>
                   Git
                 </Typography>
@@ -12948,7 +12948,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-git-square" />
+                <i className='fa fa-git-square' />
                 <Typography className={classes.materialIconText}>
                   Git-square
                 </Typography>
@@ -12961,7 +12961,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-google" />
+                <i className='fa fa-google' />
                 <Typography className={classes.materialIconText}>
                   Google
                 </Typography>
@@ -12974,7 +12974,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-graduation-cap" />
+                <i className='fa fa-graduation-cap' />
                 <Typography className={classes.materialIconText}>
                   Graduation-cap
                 </Typography>
@@ -12987,7 +12987,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-hacker-news" />
+                <i className='fa fa-hacker-news' />
                 <Typography className={classes.materialIconText}>
                   Hacker-news
                 </Typography>
@@ -13000,7 +13000,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-header" />
+                <i className='fa fa-header' />
                 <Typography className={classes.materialIconText}>
                   Header
                 </Typography>
@@ -13013,7 +13013,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-history" />
+                <i className='fa fa-history' />
                 <Typography className={classes.materialIconText}>
                   History
                 </Typography>
@@ -13026,7 +13026,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-institution" />
+                <i className='fa fa-institution' />
                 <Typography className={classes.materialIconText}>
                   Institution
                 </Typography>
@@ -13039,7 +13039,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-joomla" />
+                <i className='fa fa-joomla' />
                 <Typography className={classes.materialIconText}>
                   Joomla
                 </Typography>
@@ -13052,7 +13052,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-jsfiddle" />
+                <i className='fa fa-jsfiddle' />
                 <Typography className={classes.materialIconText}>
                   Jsfiddle
                 </Typography>
@@ -13065,7 +13065,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-language" />
+                <i className='fa fa-language' />
                 <Typography className={classes.materialIconText}>
                   Language
                 </Typography>
@@ -13078,7 +13078,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-life-bouy" />
+                <i className='fa fa-life-bouy' />
                 <Typography className={classes.materialIconText}>
                   Life-bouy
                 </Typography>
@@ -13091,7 +13091,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-life-ring" />
+                <i className='fa fa-life-ring' />
                 <Typography className={classes.materialIconText}>
                   Life-ring
                 </Typography>
@@ -13104,7 +13104,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-life-saver" />
+                <i className='fa fa-life-saver' />
                 <Typography className={classes.materialIconText}>
                   Life-saver
                 </Typography>
@@ -13117,7 +13117,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-mortar-board" />
+                <i className='fa fa-mortar-board' />
                 <Typography className={classes.materialIconText}>
                   Mortar-board
                 </Typography>
@@ -13130,7 +13130,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-openid" />
+                <i className='fa fa-openid' />
                 <Typography className={classes.materialIconText}>
                   Openid
                 </Typography>
@@ -13143,7 +13143,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-paper-plane" />
+                <i className='fa fa-paper-plane' />
                 <Typography className={classes.materialIconText}>
                   Paper-plane
                 </Typography>
@@ -13156,7 +13156,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-paper-plane-o" />
+                <i className='fa fa-paper-plane-o' />
                 <Typography className={classes.materialIconText}>
                   paper-plane-o
                 </Typography>
@@ -13169,7 +13169,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-paragraph" />
+                <i className='fa fa-paragraph' />
                 <Typography className={classes.materialIconText}>
                   Paragraph
                 </Typography>
@@ -13182,7 +13182,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-paw" />
+                <i className='fa fa-paw' />
                 <Typography className={classes.materialIconText}>
                   Paw
                 </Typography>
@@ -13195,7 +13195,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-pied-piper" />
+                <i className='fa fa-pied-piper' />
                 <Typography className={classes.materialIconText}>
                   Pied-piper
                 </Typography>
@@ -13208,7 +13208,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-pied-piper-alt" />
+                <i className='fa fa-pied-piper-alt' />
                 <Typography className={classes.materialIconText}>
                   Pied-piper-alt
                 </Typography>
@@ -13221,7 +13221,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-pied-piper-square" />
+                <i className='fa fa-pied-piper-square' />
                 <Typography className={classes.materialIconText}>
                   Pied-piper-square
                 </Typography>
@@ -13234,7 +13234,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-qq" />
+                <i className='fa fa-qq' />
                 <Typography className={classes.materialIconText}>Qq</Typography>
               </Grid>
               <Grid
@@ -13245,7 +13245,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-ra" />
+                <i className='fa fa-ra' />
                 <Typography className={classes.materialIconText}>Ra</Typography>
               </Grid>
               <Grid
@@ -13256,7 +13256,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-rebel" />
+                <i className='fa fa-rebel' />
                 <Typography className={classes.materialIconText}>
                   Rebel
                 </Typography>
@@ -13269,7 +13269,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-recycle" />
+                <i className='fa fa-recycle' />
                 <Typography className={classes.materialIconText}>
                   Recycle
                 </Typography>
@@ -13282,7 +13282,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-reddit" />
+                <i className='fa fa-reddit' />
                 <Typography className={classes.materialIconText}>
                   Reddit
                 </Typography>
@@ -13295,7 +13295,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-reddit-square" />
+                <i className='fa fa-reddit-square' />
                 <Typography className={classes.materialIconText}>
                   Reddit-square
                 </Typography>
@@ -13308,7 +13308,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-send" />
+                <i className='fa fa-send' />
                 <Typography className={classes.materialIconText}>
                   Send
                 </Typography>
@@ -13321,7 +13321,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-send-o" />
+                <i className='fa fa-send-o' />
                 <Typography className={classes.materialIconText}>
                   Send-o
                 </Typography>
@@ -13334,7 +13334,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-share-alt" />
+                <i className='fa fa-share-alt' />
                 <Typography className={classes.materialIconText}>
                   Share-alt
                 </Typography>
@@ -13347,7 +13347,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-share-alt-square" />
+                <i className='fa fa-share-alt-square' />
                 <Typography className={classes.materialIconText}>
                   Share-alt-square
                 </Typography>
@@ -13360,7 +13360,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-slack" />
+                <i className='fa fa-slack' />
                 <Typography className={classes.materialIconText}>
                   Slack
                 </Typography>
@@ -13373,7 +13373,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-sliders" />
+                <i className='fa fa-sliders' />
                 <Typography className={classes.materialIconText}>
                   Sliders
                 </Typography>
@@ -13386,7 +13386,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-soundcloud" />
+                <i className='fa fa-soundcloud' />
                 <Typography className={classes.materialIconText}>
                   Soundcloud
                 </Typography>
@@ -13399,7 +13399,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-space-shuttle" />
+                <i className='fa fa-space-shuttle' />
                 <Typography className={classes.materialIconText}>
                   Space-shuttle
                 </Typography>
@@ -13412,7 +13412,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-spoon" />
+                <i className='fa fa-spoon' />
                 <Typography className={classes.materialIconText}>
                   Spoon
                 </Typography>
@@ -13425,7 +13425,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-spotify" />
+                <i className='fa fa-spotify' />
                 <Typography className={classes.materialIconText}>
                   Spotify
                 </Typography>
@@ -13438,7 +13438,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-steam" />
+                <i className='fa fa-steam' />
                 <Typography className={classes.materialIconText}>
                   Steam
                 </Typography>
@@ -13451,7 +13451,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-steam-square" />
+                <i className='fa fa-steam-square' />
                 <Typography className={classes.materialIconText}>
                   Steam-square
                 </Typography>
@@ -13464,7 +13464,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-stumbleupon" />
+                <i className='fa fa-stumbleupon' />
                 <Typography className={classes.materialIconText}>
                   Stumbleupon
                 </Typography>
@@ -13477,7 +13477,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-stumbleupon-circle" />
+                <i className='fa fa-stumbleupon-circle' />
                 <Typography className={classes.materialIconText}>
                   Stumbleupon-circle
                 </Typography>
@@ -13490,7 +13490,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-support" />
+                <i className='fa fa-support' />
                 <Typography className={classes.materialIconText}>
                   Support
                 </Typography>
@@ -13503,7 +13503,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-taxi" />
+                <i className='fa fa-taxi' />
                 <Typography className={classes.materialIconText}>
                   Taxi
                 </Typography>
@@ -13516,7 +13516,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-tencent-weibo" />
+                <i className='fa fa-tencent-weibo' />
                 <Typography className={classes.materialIconText}>
                   Tencent-weibo
                 </Typography>
@@ -13529,7 +13529,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-tree" />
+                <i className='fa fa-tree' />
                 <Typography className={classes.materialIconText}>
                   Tree
                 </Typography>
@@ -13542,7 +13542,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-university" />
+                <i className='fa fa-university' />
                 <Typography className={classes.materialIconText}>
                   University
                 </Typography>
@@ -13555,7 +13555,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-vine" />
+                <i className='fa fa-vine' />
                 <Typography className={classes.materialIconText}>
                   Vine
                 </Typography>
@@ -13568,7 +13568,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-wechat" />
+                <i className='fa fa-wechat' />
                 <Typography className={classes.materialIconText}>
                   Wechat
                 </Typography>
@@ -13581,7 +13581,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-weixin" />
+                <i className='fa fa-weixin' />
                 <Typography className={classes.materialIconText}>
                   Weixin
                 </Typography>
@@ -13594,7 +13594,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-wordpress" />
+                <i className='fa fa-wordpress' />
                 <Typography className={classes.materialIconText}>
                   Wordpress
                 </Typography>
@@ -13607,7 +13607,7 @@ export default function IconsPage() {
                 sm={4}
                 xs={12}
               >
-                <i className="fa fa-yahoo" />
+                <i className='fa fa-yahoo' />
                 <Typography className={classes.materialIconText}>
                   Yahoo
                 </Typography>

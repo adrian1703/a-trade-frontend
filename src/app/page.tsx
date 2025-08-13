@@ -1,9 +1,5 @@
 'use client';
-import {
-  LayoutActionType,
-  useLayoutDispatch,
-  useLayoutState,
-} from '@/context/LayoutContext';
+import { LayoutActionType, useLayoutDispatch, useLayoutState } from '@/context/LayoutContext';
 
 export default function Home() {
   const { isSidebarOpened } = useLayoutState();

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Grid,
   Box,
@@ -6,35 +6,35 @@ import {
   Divider,
   Collapse,
   CardContent,
-  TextField as Input
-} from "@mui/material";
-import { Navigation as NavigationIcon } from "@mui/icons-material";
+  TextField as Input,
+} from '@mui/material';
+import { Navigation as NavigationIcon } from '@mui/icons-material';
 import {
   withGoogleMap,
   withScriptjs,
   GoogleMap,
-  Marker
-} from "react-google-maps";
+  Marker,
+} from 'react-google-maps';
 import {
   Favorite as LikeIcon,
   Chat as CommentsIcon,
   ChatBubble as ChatIcon,
-  FreeBreakfast as BreakfastIcon
-} from "@mui/icons-material";
-import useStyles from "./styles";
+  FreeBreakfast as BreakfastIcon,
+} from '@mui/icons-material';
+import useStyles from './styles';
 
 //images
-import img1 from "../../images/timeline/a2.jpg";
-import img2 from "../../images/timeline/a3.jpg";
-import img3 from "../../images/timeline/profile.jpg";
-import img4 from "../../images/timeline/a4.jpg";
-import img5 from "../../images/timeline/a1.jpg";
-import mountains from "../../images/timeline/mountains.jpeg";
+import img1 from '../../images/timeline/a2.jpg';
+import img2 from '../../images/timeline/a3.jpg';
+import img3 from '../../images/timeline/profile.jpg';
+import img4 from '../../images/timeline/a4.jpg';
+import img5 from '../../images/timeline/a1.jpg';
+import mountains from '../../images/timeline/mountains.jpeg';
 
 //components
-import { Typography, Avatar, Link, Button } from "../../components/Wrappers";
-import { Annotation, Timestep, Circle } from "../../components/Timeline";
-import Widget from "../../components/Widget";
+import { Typography, Avatar, Link, Button } from '../../components/Wrappers';
+import { Annotation, Timestep, Circle } from '../../components/Timeline';
+import Widget from '../../components/Widget';
 
 // const BasicMap = withScriptjs(
 //   withGoogleMap(() => (
@@ -62,22 +62,22 @@ export default function TimelineComp() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Box
-            display={"flex"}
-            flexDirection={"column"}
-            justifyContent={"center"}
+            display={'flex'}
+            flexDirection={'column'}
+            justifyContent={'center'}
             className={classes.wrapper}
           >
             <Annotation>
-              <Box width={"45%"}>
+              <Box width={'45%'}>
                 <Widget disableWidgetMenu inheritHeight>
-                  <Box display={"flex"} flexDirection="column">
-                    <Box display="flex">
+                  <Box display={'flex'} flexDirection='column'>
+                    <Box display='flex'>
                       <Avatar src={img1} style={{ marginRight: 8 }} />
                       <Typography block>
-                        <Box fontWeight={"fontWeightBold"}>
-                          <Link color="primary">Jessica Nilson</Link> @jess
+                        <Box fontWeight={'fontWeightBold'}>
+                          <Link color='primary'>Jessica Nilson</Link> @jess
                         </Box>
-                        <Box fontSize={".875rem"}>
+                        <Box fontSize={'.875rem'}>
                           10:12 am - Publicly near Minsk
                         </Box>
                       </Typography>
@@ -101,103 +101,103 @@ export default function TimelineComp() {
                     {/*    mapElement={<div style={{ height: "100%" }} />}*/}
                     {/*  />*/}
                     {/*</Box>*/}
-                    <Box display="flex" ml={"-12px"} my={1}>
-                      <IconButton aria-label="like">
+                    <Box display='flex' ml={'-12px'} my={1}>
+                      <IconButton aria-label='like'>
                         <LikeIcon />
                       </IconButton>
-                      <IconButton aria-label="comments">
+                      <IconButton aria-label='comments'>
                         <CommentsIcon />
                       </IconButton>
                     </Box>
                     <Divider className={classes.divider} />
-                    <Box display="flex" my={2}>
+                    <Box display='flex' my={2}>
                       <Avatar src={img1} style={{ marginRight: 8 }} />
                       <Typography block>
                         <Box
-                          fontWeight={"fontWeightBold"}
-                          display="flex"
-                          alignItems="center"
-                          fontSize={".77rem"}
+                          fontWeight={'fontWeightBold'}
+                          display='flex'
+                          alignItems='center'
+                          fontSize={'.77rem'}
                         >
-                          <Link to="#" color="primary">
+                          <Link to='#' color='primary'>
                             Jessica Nilson
-                          </Link>{" "}
+                          </Link>{' '}
                           <Box
-                            fontSize={".7rem"}
-                            fontWeight="fontWeightRegular"
+                            fontSize={'.7rem'}
+                            fontWeight='fontWeightRegular'
                             ml={1}
                           >
                             7 mins ago
                           </Box>
                         </Box>
-                        <Box fontSize={".8rem"}>
+                        <Box fontSize={'.8rem'}>
                           Someone said they were the best people out there just
                           few years ago. Don't know better options.
                         </Box>
                       </Typography>
                     </Box>
                     <Divider className={classes.divider} />
-                    <Box display="flex" my={2}>
+                    <Box display='flex' my={2}>
                       <Avatar src={img2} style={{ marginRight: 8 }} />
                       <Typography block>
                         <Box
-                          fontWeight={"fontWeightBold"}
-                          display="flex"
-                          alignItems="center"
-                          fontSize={".77rem"}
+                          fontWeight={'fontWeightBold'}
+                          display='flex'
+                          alignItems='center'
+                          fontSize={'.77rem'}
                         >
-                          <Link to="#" color="primary">
+                          <Link to='#' color='primary'>
                             Ignacio Abad
-                          </Link>{" "}
+                          </Link>{' '}
                           <Box
-                            fontSize={".7rem"}
-                            fontWeight="fontWeightRegular"
+                            fontSize={'.7rem'}
+                            fontWeight='fontWeightRegular'
                             ml={1}
                           >
                             6 mins ago
                           </Box>
                         </Box>
-                        <Box fontSize={".8rem"}>
+                        <Box fontSize={'.8rem'}>
                           True. Heard absolutely the same.
                         </Box>
                       </Typography>
                     </Box>
                     <Divider className={classes.divider} />
-                    <Box display="flex" mt={3}>
-                      <Avatar color="primary" style={{ marginRight: 8 }}>
+                    <Box display='flex' mt={3}>
+                      <Avatar color='primary' style={{ marginRight: 8 }}>
                         P
                       </Avatar>
                       <Input
-                        placeholder="Write your comment..."
+                        placeholder='Write your comment...'
                         style={{ flexGrow: 1 }}
                       />
                     </Box>
                   </Box>
                 </Widget>
               </Box>
-              <Circle color={"primary"}>
+              <Circle color={'primary'}>
                 <NavigationIcon className={classes.icon} />
               </Circle>
-              <Timestep day={"yesterday"} timestep={"8:03 pm"} />
+              <Timestep day={'yesterday'} timestep={'8:03 pm'} />
             </Annotation>
             <Annotation>
-              <Timestep day={"yesterday"} timestep={"9:03 am"} right />
-              <Circle color={"secondary"}>
+              <Timestep day={'yesterday'} timestep={'9:03 am'} right />
+              <Circle color={'secondary'}>
                 <ChatIcon className={classes.icon} />
               </Circle>
-              <Box width={"45%"}>
+              <Box width={'45%'}>
                 <Widget disableWidgetMenu inheritHeight>
-                  <Box display={"flex"} flexDirection="column">
-                    <Box display="flex">
+                  <Box display={'flex'} flexDirection='column'>
+                    <Box display='flex'>
                       <Avatar src={img3} style={{ marginRight: 8 }} />
                       <Typography block>
-                        <Box fontWeight={"fontWeightBold"}>
-                          <Link to="#" color="secondary">
+                        <Box fontWeight={'fontWeightBold'}>
+                          <Link to='#' color='secondary'>
                             Bob Nilson
-                          </Link>{" "}
+                          </Link>{' '}
                           @nils
                         </Box>
-                        <Box fontSize={".875rem"}>
+                        <Box fontSize={'.875rem'}>
                           February 22, 2014 at 01:59 PM
                         </Box>
                       </Typography>
@@ -207,11 +207,11 @@ export default function TimelineComp() {
                       ever-evolving process of maturing. Because when there is a
                       maturity, there is ...
                     </Box>
-                    <Box display="flex" ml={"-12px"} mt={1}>
-                      <IconButton aria-label="like">
+                    <Box display='flex' ml={'-12px'} mt={1}>
+                      <IconButton aria-label='like'>
                         <LikeIcon />
                       </IconButton>
-                      <IconButton aria-label="comments">
+                      <IconButton aria-label='comments'>
                         <CommentsIcon />
                       </IconButton>
                     </Box>
@@ -220,20 +220,20 @@ export default function TimelineComp() {
               </Box>
             </Annotation>
             <Annotation>
-              <Box width={"45%"}>
+              <Box width={'45%'}>
                 <Widget disableWidgetMenu inheritHeight>
-                  <Box display={"flex"} flexDirection="column">
-                    <Box display="flex">
+                  <Box display={'flex'} flexDirection='column'>
+                    <Box display='flex'>
                       <Avatar src={img1} style={{ marginRight: 8 }} />
                       <Typography block>
-                        <Box fontWeight={"fontWeightBold"}>
-                          <Link color="warning">Jessica Smith</Link> @jess
+                        <Box fontWeight={'fontWeightBold'}>
+                          <Link color='warning'>Jessica Smith</Link> @jess
                         </Box>
-                        <Box fontSize={".875rem"}>
+                        <Box fontSize={'.875rem'}>
                           February 22, 2014 at 01:59 PM
                         </Box>
                         <Box my={1}>
-                          <Typography variant={"subtitle2"}>
+                          <Typography variant={'subtitle2'}>
                             Check out this awesome photo I made in Italy last
                             summer. Seems it was lost somewhere deep inside my
                             brand new HDD 40TB. Thanks god I found it!
@@ -241,92 +241,92 @@ export default function TimelineComp() {
                         </Box>
                       </Typography>
                     </Box>
-                    <Box height={400} width={"100%"} mx={"-24px"} mt={2}>
+                    <Box height={400} width={'100%'} mx={'-24px'} mt={2}>
                       <img
                         src={mountains}
-                        alt="mountains"
-                        style={{ height: "100%", width: "calc(100% + 48px)" }}
+                        alt='mountains'
+                        style={{ height: '100%', width: 'calc(100% + 48px)' }}
                       />
                     </Box>
-                    <Box display="flex" ml={"-12px"} mt={1}>
-                      <IconButton aria-label="like">
+                    <Box display='flex' ml={'-12px'} mt={1}>
+                      <IconButton aria-label='like'>
                         <LikeIcon />
                       </IconButton>
-                      <IconButton aria-label="comments">
+                      <IconButton aria-label='comments'>
                         <CommentsIcon />
                       </IconButton>
-                      <Box ml={"auto"} display={"flex"}>
+                      <Box ml={'auto'} display={'flex'}>
                         <Avatar src={img1} />
                         <Avatar src={img2} style={{ marginLeft: 8 }} />
                         <Avatar src={img3} style={{ marginLeft: 8 }} />
                       </Box>
                     </Box>
                     <Divider className={classes.divider} />
-                    <Box display="flex" my={2}>
+                    <Box display='flex' my={2}>
                       <Avatar src={img5} style={{ marginRight: 8 }} />
                       <Typography block>
                         <Box
-                          fontWeight={"fontWeightBold"}
-                          display="flex"
-                          alignItems="center"
-                          fontSize={".77rem"}
+                          fontWeight={'fontWeightBold'}
+                          display='flex'
+                          alignItems='center'
+                          fontSize={'.77rem'}
                         >
-                          <Link to="#" color="warning">
+                          <Link to='#' color='warning'>
                             Ignacio Abad
-                          </Link>{" "}
+                          </Link>{' '}
                           <Box
-                            fontSize={".7rem"}
-                            fontWeight="fontWeightRegular"
+                            fontSize={'.7rem'}
+                            fontWeight='fontWeightRegular'
                             ml={1}
                           >
                             6 mins ago
                           </Box>
                         </Box>
-                        <Box fontSize={".8rem"}>
+                        <Box fontSize={'.8rem'}>
                           Hey, have you heard anything about that?
                         </Box>
                       </Typography>
                     </Box>
                     <Divider className={classes.divider} />
-                    <Box display="flex" mt={3}>
-                      <Avatar color="warning" style={{ marginRight: 8 }}>
+                    <Box display='flex' mt={3}>
+                      <Avatar color='warning' style={{ marginRight: 8 }}>
                         P
                       </Avatar>
                       <Input
-                        placeholder="Write your comment..."
+                        placeholder='Write your comment...'
                         style={{ flexGrow: 1 }}
                       />
                     </Box>
                   </Box>
                 </Widget>
               </Box>
-              <Circle color={"warning"}>
+              <Circle color={'warning'}>
                 <BreakfastIcon className={classes.icon} />
               </Circle>
-              <Timestep day={"yesterday"} timestep={"9:03 pm"} />
+              <Timestep day={'yesterday'} timestep={'9:03 pm'} />
             </Annotation>
             <Annotation>
-              <Timestep day={"yesterday"} timestep={"9:03 am"} right />
-              <Circle color={"success"}>J</Circle>
-              <Box width={"45%"}>
+              <Timestep day={'yesterday'} timestep={'9:03 am'} right />
+              <Circle color={'success'}>J</Circle>
+              <Box width={'45%'}>
                 <Widget disableWidgetMenu inheritHeight>
-                  <Box display={"flex"} flexDirection="column">
-                    <Box display="flex">
+                  <Box display={'flex'} flexDirection='column'>
+                    <Box display='flex'>
                       <Avatar src={img4} style={{ marginRight: 8 }} />
                       <Typography block>
-                        <Box fontWeight={"fontWeightBold"}>
-                          <Link to="#" color="success">
+                        <Box fontWeight={'fontWeightBold'}>
+                          <Link to='#' color='success'>
                             Jessica Smith
-                          </Link>{" "}
+                          </Link>{' '}
                           @jess
                         </Box>
-                        <Box fontSize={".875rem"}>
+                        <Box fontSize={'.875rem'}>
                           9:03 am - Publicly near Minsk
                         </Box>
                       </Typography>
                     </Box>
                     <Box mt={2}>
-                      <Typography variant={"h6"}>
+                      <Typography variant={'h6'}>
                         New <b>Project</b> Launch
                       </Typography>
                       <Box my={1}>
@@ -339,7 +339,7 @@ export default function TimelineComp() {
                           Read more...
                         </Button>
                       </Box>
-                      <Collapse in={expanded} timeout="auto" unmountOnExit>
+                      <Collapse in={expanded} timeout='auto' unmountOnExit>
                         <CardContent>
                           <Typography paragraph>
                             Finished her are its honoured drawings nor. Pretty
@@ -373,11 +373,11 @@ export default function TimelineComp() {
                         </CardContent>
                       </Collapse>
                     </Box>
-                    <Box display="flex" ml={"-12px"} mt={1}>
-                      <IconButton aria-label="like">
+                    <Box display='flex' ml={'-12px'} mt={1}>
+                      <IconButton aria-label='like'>
                         <LikeIcon />
                       </IconButton>
-                      <IconButton aria-label="comments">
+                      <IconButton aria-label='comments'>
                         <CommentsIcon />
                       </IconButton>
                     </Box>
