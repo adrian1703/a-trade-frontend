@@ -8,6 +8,7 @@ const roboto = Roboto({
   display: 'swap',
 });
 
+// @ts-ignore
 const theme = createTheme({
   colorSchemes: { light: true, dark: true },
   cssVariables: {

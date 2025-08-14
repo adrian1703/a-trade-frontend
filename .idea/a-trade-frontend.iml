@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/reference" />
       <excludeFolder url="file://$MODULE_DIR$/web-ui-template" />
     </content>
     <orderEntry type="inheritedJdk" />
