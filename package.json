@@ -16,6 +16,13 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "@mui/material-nextjs": "latest",
+    "@mui/x-charts": "^8.10.1",
+    "@mui/x-data-grid": "^8.10.1",
+    "@mui/x-data-grid-pro": "^8.10.1",
+    "@mui/x-date-pickers": "^8.10.0",
+    "@mui/x-tree-view": "^8.10.0",
+    "@react-spring/web": "^10.0.1",
+    "dayjs": "^1.11.13",
     "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -26,7 +33,7 @@
     "@types/react-dom": "^19.0.0",
     "eslint": "latest",
     "eslint-config-next": "^15.4.6",
-    "typescript": "latest",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "typescript": "latest"
   }
 }
