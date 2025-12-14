@@ -12,7 +12,7 @@ import {MatToolbar} from '@angular/material/toolbar';
     MatIconButton
   ],
   template: `
-    <mat-toolbar class="mat-bg-secondary-container mat-text-primary">
+    <mat-toolbar class="mat-bg-secondary-container">
       <a matButton href="#">
         <mat-icon>home</mat-icon>
         <span>{{ title() }}</span>
@@ -32,20 +32,9 @@ import {MatToolbar} from '@angular/material/toolbar';
     mat-icon {
       color: var(--mat-sys-primary);
     }
-
     span {
       color: var(--mat-sys-primary);
     }
-
-    .topbar-header {
-      height: 8%;
-      display: flex;
-      align-items: center;
-    }
-
-    .topbar-left {
-    }
-
     .padding {
       margin: auto;
     }

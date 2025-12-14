@@ -40,7 +40,7 @@ html, body {
 }
 
 /* Debug layout: show element boundaries (no layout shift) */
-* {
+.debug, .debug * {
   outline: 1px solid rgba(255, 0, 0, 0.25);
   outline-offset: -1px; /* keeps the outline tight to the element box */
 }
