@@ -2,6 +2,8 @@ import {Component, Input, Signal} from '@angular/core';
 import {MatButton, MatIconButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatToolbar} from '@angular/material/toolbar';
+import {MatMenuTrigger} from '@angular/material/menu';
+import {AccountMenu} from '../account-menu/account-menu';
 
 @Component({
   selector: 'app-topbar',
@@ -9,7 +11,9 @@ import {MatToolbar} from '@angular/material/toolbar';
     MatButton,
     MatIcon,
     MatToolbar,
-    MatIconButton
+    MatIconButton,
+    MatMenuTrigger,
+    AccountMenu
   ],
   template: `
     <mat-toolbar class="mat-bg-secondary-container">
@@ -21,10 +25,11 @@ import {MatToolbar} from '@angular/material/toolbar';
       <button matIconButton>
         <mat-icon>search</mat-icon>
       </button>
-      <a matButton href="#">
+      <button matButton [mat-menu-trigger-for]="accountMenu.matMenu">
         <mat-icon>account_circle</mat-icon>
         <span>Account</span>
-      </a>
+      </button>
+      <account-menu #accountMenu></account-menu>
     </mat-toolbar>
 
   `,
