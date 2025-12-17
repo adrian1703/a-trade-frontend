@@ -12,12 +12,10 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
 @Component({
   selector: 'app-sidebar',
   template: `
+
     <mat-sidenav-container class="sidenav-container">
       <mat-sidenav #drawer class="
       sidenav
-      mat-bg-surface-container
-      mat-shadow-1
-      mat-border
 "
                    [fixedInViewport]="false"
                    [fixedTopGap]="0"
@@ -25,11 +23,17 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
                    [attr.role]="'navigation'"
                    [mode]="'side'"
                    [opened]="true"
+
       >
         <!--                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"-->
         <!--                   [mode]="(isHeandset$ | async) ? 'side' : 'side'"-->
         <!--                   [opened]="(isHandset$ | async) === false"-->
-        <mat-nav-list>
+        <mat-nav-list class="
+        nav-list
+      mat-bg-surface-container
+      mat-shadow-1
+      mat-border
+">
           @for (link of links; track link) {
             <a
               class="link-list-item"
@@ -49,9 +53,16 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
 
   `,
   styles  : `
+
+    .nav-list {
+      margin-top: 1rem;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      border-left: none;
+
+    }
     .sidenav-container {
       height: 100%;
-      margin: 8px 0;
       box-sizing: border-box;
     }
 

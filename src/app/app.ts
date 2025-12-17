@@ -15,9 +15,9 @@ import {MatToolbar} from '@angular/material/toolbar';
   ],
   template: `
     <div class="app">
-      <app-topbar class="example-header" [title]="title"/>
+      <app-topbar class="header" [title]="title"/>
       <app-sidebar class="main"/>
-      <mat-toolbar class="example-footer">
+      <mat-toolbar class="footer">
         <h1 class="mat-text-primary">{{ title() }}</h1>
         <mat-slide-toggle>Toggle me!</mat-slide-toggle>
       </mat-toolbar>
@@ -30,18 +30,18 @@ import {MatToolbar} from '@angular/material/toolbar';
       height: 100vh;
     }
 
-    .example-header {
+    .header {
       flex: 0 0 auto;
     }
 
     .main {
-      flex: 1 0 auto;
+      flex: 1 1 auto;
+      min-height: 0;
     }
 
-    .example-footer {
+    .footer {
       background: var(--mat-sys-primary-container);
       flex: 0 0 auto;
-      margin-top: 15px;
     }
   `
 })
