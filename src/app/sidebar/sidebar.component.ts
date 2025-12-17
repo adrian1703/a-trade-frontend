@@ -1,6 +1,5 @@
 import {Component, inject} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {AsyncPipe} from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -17,9 +16,12 @@ import {map, shareReplay} from 'rxjs/operators';
                    [fixedInViewport]="false"
                    [fixedTopGap]="0"
                    [fixedBottomGap]="0"
-                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-                   [mode]="(isHandset$ | async) ? 'side' : 'side'"
-                   [opened]="(isHandset$ | async) === false">
+                   [attr.role]="'navigation'"
+                   [mode]="'side'"
+                   [opened]="true">
+        <!--                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"-->
+        <!--                   [mode]="(isHeandset$ | async) ? 'side' : 'side'"-->
+        <!--                   [opened]="(isHandset$ | async) === false"-->
         <mat-toolbar>Menu</mat-toolbar>
         <mat-nav-list>
           <a mat-list-item href="#">Link 1</a>
@@ -67,13 +69,13 @@ import {map, shareReplay} from 'rxjs/operators';
     }
 
   `,
-  imports : [
+  imports: [
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    AsyncPipe,
+
   ]
 })
 export class SidebarComponent {
