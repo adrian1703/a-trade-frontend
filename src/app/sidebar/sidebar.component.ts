@@ -13,35 +13,35 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
   selector: 'app-sidebar',
   template: `
     <mat-sidenav-container class="sidenav-container">
-      <mat-sidenav #drawer class="sidenav"
+      <mat-sidenav #drawer class="
+      sidenav
+      mat-bg-surface-container
+      mat-shadow-1
+      mat-border
+"
                    [fixedInViewport]="false"
                    [fixedTopGap]="0"
                    [fixedBottomGap]="0"
                    [attr.role]="'navigation'"
                    [mode]="'side'"
-                   [opened]="true">
+                   [opened]="true"
+      >
         <!--                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"-->
         <!--                   [mode]="(isHeandset$ | async) ? 'side' : 'side'"-->
         <!--                   [opened]="(isHandset$ | async) === false"-->
-        <mat-toolbar>Menu</mat-toolbar>
         <mat-nav-list>
-          <a mat-list-item href="#">Link 1</a>
-          <a mat-list-item href="#">Link 2</a>
-          <a mat-list-item href="#">Link 3</a>
+          @for (link of links; track link) {
+            <a
+              class="link-list-item"
+              mat-list-item
+              [href]="link.href">
+              <mat-icon>{{ link.icon }}</mat-icon>
+              <span>{{ link.label }}</span>
+            </a>
+          }
         </mat-nav-list>
       </mat-sidenav>
       <mat-sidenav-content>
-        <!--        <mat-toolbar color="primary">-->
-        <!--            <button-->
-        <!--              type="button"-->
-        <!--              aria-label="Toggle sidenav"-->
-        <!--              matIconButton-->
-        <!--              (click)="drawer.toggle()">-->
-        <!--              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>-->
-        <!--            </button>-->
-        <!--          <span>a-trade-frontend</span>-->
-        <!--        </mat-toolbar>-->
-        <!-- Add Content Here -->
         <app-dashboard></app-dashboard>
       </mat-sidenav-content>
 
@@ -51,10 +51,21 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
   styles  : `
     .sidenav-container {
       height: 100%;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    .link-list-item * {
+      align-items: center;
+      vertical-align: middle;
+    }
+
+    .mat-icon {
+      font-size: 19px;
     }
 
     .sidenav {
-      width: 200px;
+      width: 170px;
     }
 
     .sidenav .mat-toolbar {
@@ -76,6 +87,7 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
     MatIconModule,
     DashboardComponent,
 
+
   ]
 })
 export class SidebarComponent {
@@ -86,4 +98,9 @@ export class SidebarComponent {
                                           map(result => result.matches),
                                           shareReplay()
                                         );
+  links = [
+    {label: 'Home', icon: 'home', href: '#'},
+    {label: 'Dashboard', icon: 'dashboard', href: '#'},
+    {label: 'Settings', icon: 'settings', href: '#'}
+  ];
 }

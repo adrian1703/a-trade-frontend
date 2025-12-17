@@ -41,6 +41,7 @@ import {MatToolbar} from '@angular/material/toolbar';
     .example-footer {
       background: var(--mat-sys-primary-container);
       flex: 0 0 auto;
+      margin-top: 15px;
     }
   `
 })
