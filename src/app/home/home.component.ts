@@ -1,19 +1,16 @@
-import {Component, inject} from '@angular/core';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {Component} from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
-import {Observable} from 'rxjs';
-import {map, shareReplay} from 'rxjs/operators';
-import {DashboardComponent} from '../dashboard/dashboard.component';
+import {RouterLink, RouterOutlet} from '@angular/router';
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'app-home',
   template: `
 
-    <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav-container class="home-container">
       <mat-sidenav #drawer class="
       sidenav
 "
@@ -25,9 +22,6 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
                    [opened]="true"
 
       >
-        <!--                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"-->
-        <!--                   [mode]="(isHeandset$ | async) ? 'side' : 'side'"-->
-        <!--                   [opened]="(isHandset$ | async) === false"-->
         <mat-nav-list class="
         nav-list
       mat-bg-surface-container
@@ -38,7 +32,7 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
             <a
               class="link-list-item"
               mat-list-item
-              [href]="link.href">
+              [routerLink]="link.routerLink">
               <mat-icon>{{ link.icon }}</mat-icon>
               <span>{{ link.label }}</span>
             </a>
@@ -46,7 +40,7 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
         </mat-nav-list>
       </mat-sidenav>
       <mat-sidenav-content>
-        <app-dashboard></app-dashboard>
+        <router-outlet></router-outlet>
       </mat-sidenav-content>
 
     </mat-sidenav-container>
@@ -61,7 +55,8 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
       border-left: none;
 
     }
-    .sidenav-container {
+
+    .home-container {
       height: 100%;
       box-sizing: border-box;
     }
@@ -96,22 +91,17 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    DashboardComponent,
+    RouterOutlet,
+    RouterLink,
 
 
   ]
 })
-export class SidebarComponent {
-  private breakpointObserver = inject(BreakpointObserver);
-
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-                                        .pipe(
-                                          map(result => result.matches),
-                                          shareReplay()
-                                        );
+export class HomeComponent {
   links = [
-    {label: 'Home', icon: 'home', href: '#'},
-    {label: 'Dashboard', icon: 'dashboard', href: '#'},
-    {label: 'Settings', icon: 'settings', href: '#'}
+    {label: 'Home', icon: 'home', routerLink: ''},
+    {label: 'Dashboard', icon: 'dashboard', routerLink: 'dashboard'},
+    {label: 'Settings', icon: 'settings', routerLink: ''},
+    {label: 'Buttons', icon: 'code', routerLink: 'button'},
   ];
 }

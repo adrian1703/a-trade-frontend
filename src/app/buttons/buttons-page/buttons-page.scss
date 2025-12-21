@@ -1,0 +1,39 @@
+@use "@angular/material" as mat;
+
+.button-primary {
+  @include mat.button-overrides((
+    //'filled-container-shape' : 0px
+    'outlined-label-text-color' : #333,
+    'outlined-horizontal-padding' : 0px,
+    'outlined-container-shape' : 3px,
+    'outlined-touch-target-size' : 50px,
+    //'outlined-label-text-transform' : 0px,
+  ));
+}
+
+.small-primary {
+  @include mat.button-overrides((
+    //'filled-container-shape' : 0px
+    'outlined-label-text-color' : #333,
+    'outlined-horizontal-padding' : 8px,
+    'protected-horizontal-padding' : 0px,
+    'outlined-container-shape' : 8px,
+    'outlined-touch-target-size' : 20px,
+    //'outlined-label-text-transform' : 0px,
+  ));
+
+}
+
+/*
+Source - https://stackoverflow.com/a/33609249
+Posted by Tiago, modified by community. See post 'Timeline' for change history
+Retrieved 2025-12-18, License - CC BY-SA 3.0
+*/
+
+.mdc-button {
+  min-width: 1%;
+  //min-height: 23px !important;
+  height: 23px;
+}
+
+

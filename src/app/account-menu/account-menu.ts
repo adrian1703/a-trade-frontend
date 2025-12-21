@@ -6,15 +6,12 @@ import {MatIcon} from '@angular/material/icon';
   selector: 'account-menu',
   template: `
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>account_circle</mat-icon>
-        <span>Profile</span></button>
-      <button mat-menu-item>
-        <mat-icon>settings</mat-icon>
-        <span>Settings</span></button>
-      <button mat-menu-item>
-        <mat-icon>exit_to_app</mat-icon>
-        <span>Sign out</span></button>
+      @for (btnCfg of buttonConfig; track $index; ) {
+        <button mat-menu-item class="menu-button">
+          <mat-icon>{{ btnCfg.icon }}</mat-icon>
+          <span>{{ btnCfg.label }}</span>
+        </button>
+      }
     </mat-menu>
   `,
   styles  : ``,
@@ -27,4 +24,11 @@ import {MatIcon} from '@angular/material/icon';
 })
 export class AccountMenu {
   @ViewChild('menu', {static: true}) matMenu!: MatMenu;
+
+
+  buttonConfig = [
+    {icon: 'account_circle', label: 'Profile'},
+    {icon: 'settings', label: 'Settings'},
+    {icon: 'exit_to_app', label: 'Sign out'}
+  ]
 }

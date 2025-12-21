@@ -4,6 +4,7 @@ import {MatIcon} from '@angular/material/icon';
 import {MatToolbar} from '@angular/material/toolbar';
 import {MatMenuTrigger} from '@angular/material/menu';
 import {AccountMenu} from '../account-menu/account-menu';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-topbar',
@@ -13,11 +14,12 @@ import {AccountMenu} from '../account-menu/account-menu';
     MatToolbar,
     MatIconButton,
     MatMenuTrigger,
-    AccountMenu
+    AccountMenu,
+    RouterLink
   ],
   template: `
     <mat-toolbar class="mat-bg-secondary-container">
-      <a matButton href="#">
+      <a matButton routerLink="home">
         <mat-icon>home</mat-icon>
         <span>{{ title() }}</span>
       </a>

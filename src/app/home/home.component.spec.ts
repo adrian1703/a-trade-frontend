@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 
-import {SidebarComponent} from './sidebar.component';
+import {HomeComponent} from './home.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
@@ -8,12 +8,12 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 describe('SidebarComponent', () => {
-  let component: SidebarComponent;
-  let fixture: ComponentFixture<SidebarComponent>;
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [SidebarComponent],
+      declarations: [HomeComponent],
       imports     : [
         MatButtonModule,
         MatIconModule,
@@ -25,7 +25,7 @@ describe('SidebarComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture   = TestBed.createComponent(SidebarComponent);
+    fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
