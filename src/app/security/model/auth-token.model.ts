@@ -1,8 +1,14 @@
-export class Token {
+export enum AuthRole {
+  Admin   = 'Admin',
+  User    = 'User',
+  Unknown = 'Unknown'
+}
+
+export class AuthToken {
   issuedAt: Date;
   expiresAt: Date;
   username: string;
-  role: 'Admin' | 'User' | 'Unknown';
+  role: AuthRole;
   validRoles: string[] = ['Admin', 'User'];
 
   private issuedAtKey: string  = "iat";
@@ -19,9 +25,9 @@ export class Token {
       this.issuedAt  = new Date((data[this.issuedAtKey] as number) * 1000);
       this.expiresAt = new Date((data[this.expiresAtKey] as number) * 1000);
       this.username  = data[this.usernameKey];
-      this.role      = data[this.roleKey] as 'Admin' | 'User' | 'Unknown';
+      this.role = data[this.roleKey] as AuthRole;
       if (!this.validRoles.includes(this.role)) {
-        this.role = 'Unknown';
+        this.role = AuthRole.Unknown;
         console.log(`Invalid role detected: ${data[this.roleKey]}`);
       }
     }

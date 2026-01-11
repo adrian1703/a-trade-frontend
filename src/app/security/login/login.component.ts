@@ -3,7 +3,7 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from '@angular/mat
 import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MatButton} from '@angular/material/button';
-import {AuthService} from '../security/auth.service';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-login',

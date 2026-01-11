@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {Token} from './token.model';
+import {AuthToken} from './auth-token.model';
 import {AuthService} from '../auth.service';
 
 const auth         = new AuthService()
@@ -9,21 +9,21 @@ const tokenUnknown = auth.tokenUnknown;
 
 describe('Token', () => {
   it('should parse token without exp', () => {
-    console.log(Token.parseJwt(tokenAdmin))
+    console.log(AuthToken.parseJwt(tokenAdmin))
   })
   it('should parse username, role, iat and exp from token', () => {
-    const token = new Token(tokenAdmin);
+    const token = new AuthToken(tokenAdmin);
     expect(token.username).toBe('Adrian');
     expect(token.role).toBe('Admin');
     // expect(token.issuedAt.getTime()).toBe(1767542202000);   // Because iat is 1767542202 (unix seconds)
     // expect(token.expiresAt.getTime()).toBe(1767542202000); // Because exp is 1767542202 (unix seconds)
   });
   it('should parse role user from token', () => {
-    const token = new Token(tokenUser);
+    const token = new AuthToken(tokenUser);
     expect(token.role).toBe('User');
   });
   it('should parse role unknown from token', () => {
-    const token = new Token(tokenUnknown);
+    const token = new AuthToken(tokenUnknown);
     expect(token.role).toBe('Unknown');
   });
 });

@@ -19,8 +19,7 @@ import {RouterOutlet} from '@angular/router';
         <router-outlet/>
       </div>
       <mat-toolbar class="footer">
-        <h1 class="mat-text-primary">{{ title() }}</h1>
-        <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+        <span>Placeholder</span>
       </mat-toolbar>
     </div>
   `,
