@@ -18,18 +18,22 @@ export class AuthService {
 
 
   login(username: string, password: string) {
+    //fetch jwt from backend
+    //validate jwt
+    //write jwt to cookie
     const parsedUsername = username as AuthRole;
     switch (parsedUsername) {
       case AuthRole.Admin:
         this.writeAuthToken(this.tokenAdmin)
         break;
       case AuthRole.User:
+        this.writeAuthToken(this.tokenUser)
         break;
       case AuthRole.Unknown:
+        this.writeAuthToken(this.tokenUnknown)
         break;
       default:
         break
-
     }
   }
 
@@ -42,11 +46,11 @@ export class AuthService {
     return new AuthToken(authTokenString);
   }
 
-  readAuthToken() {
-    return this.storageService.readCookie(CookieKey.AuthToken);
+  private readAuthToken() {
+    return this.storageService.readCookie(CookieKey.AuthToken)!!;
   }
 
-  writeAuthToken(token: string) {
+  private writeAuthToken(token: string) {
     this.storageService.writeCookie(CookieKey.AuthToken, token);
   }
 }

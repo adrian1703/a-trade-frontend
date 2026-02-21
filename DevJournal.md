@@ -8,6 +8,11 @@ Roadmap:
 - ~~Auth Token abstraction~~ - basic impl
 - ~~Cookie Read Write~~ -> Storage writer
 - Authservice - somewhat untested but good enough
+  - started jwt mock backend
+    - ~~mock api~~ - sort of finished
+    - maybe a mocktest on admin
+    - need dynamic token gen
+    - hockup authservice with mock backend
   - login
   - logout
   - get role
