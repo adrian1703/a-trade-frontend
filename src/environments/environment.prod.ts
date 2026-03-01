@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  isProduction: true,
   useMockApi: false,
   apiBaseUrl: 'https://api.example.com',
 };
