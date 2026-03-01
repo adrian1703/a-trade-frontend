@@ -4,12 +4,15 @@ export enum AuthRole {
   Unknown = 'Unknown'
 }
 
+/**
+ * Represents an authentication token and provides utilities to parse and validate token data.
+ */
 export class AuthToken {
-  issuedAt: Date;
-  expiresAt: Date;
-  username: string;
-  role: AuthRole;
-  validRoles: string[] = ['Admin', 'User'];
+  readonly issuedAt: Date;
+  readonly expiresAt: Date;
+  readonly username: string;
+  readonly role: AuthRole;
+  readonly validRoles: readonly string[] = ['Admin', 'User'];
 
   private issuedAtKey: string  = "iat";
   private expiresAtKey: string = "exp";
