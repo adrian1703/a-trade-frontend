@@ -1,16 +1,16 @@
-import {describe, expect, it} from 'vitest';
-import {AuthToken} from './auth-token.model';
-import {AuthService} from '../auth.service';
+import { describe, expect, it } from 'vitest';
+import { AuthToken } from './auth-token.model';
+import { AuthService } from '../auth.service';
 
-const auth         = new AuthService()
-const tokenAdmin   = auth.tokenAdmin;
-const tokenUser    = auth.tokenUser;
+const auth = new AuthService();
+const tokenAdmin = auth.tokenAdmin;
+const tokenUser = auth.tokenUser;
 const tokenUnknown = auth.tokenUnknown;
 
 describe('Token', () => {
   it('should parse token without exp', () => {
-    console.log(AuthToken.parseJwt(tokenAdmin))
-  })
+    console.log(AuthToken.parseJwt(tokenAdmin));
+  });
   it('should parse username, role, iat and exp from token', () => {
     const token = new AuthToken(tokenAdmin);
     expect(token.username).toBe('Adrian');

@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {AccountMenu} from './account-menu';
+import { AccountMenu } from './account-menu';
 
 describe('AccountMenu', () => {
   let component: AccountMenu;
@@ -8,11 +8,10 @@ describe('AccountMenu', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AccountMenu]
-    })
-                 .compileComponents();
+      imports: [AccountMenu],
+    }).compileComponents();
 
-    fixture   = TestBed.createComponent(AccountMenu);
+    fixture = TestBed.createComponent(AccountMenu);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

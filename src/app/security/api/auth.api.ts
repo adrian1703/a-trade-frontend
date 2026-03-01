@@ -1,8 +1,10 @@
-import {InjectionToken} from '@angular/core';
-import {ApiResult} from '../../api/api-result.model';
-import {Observable} from 'rxjs';
+import { InjectionToken } from '@angular/core';
+import { ApiResult } from '../../api/api-result.model';
+import { Observable } from 'rxjs';
 
-export type LoginResponse = { token: string };
+export interface LoginResponse {
+  token: string;
+}
 
 export interface AuthApi {
   login(username: string, password: string): Observable<ApiResult<LoginResponse>>;

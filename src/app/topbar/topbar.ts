@@ -1,22 +1,14 @@
-import {Component, Input, Signal} from '@angular/core';
-import {MatButton, MatIconButton} from '@angular/material/button';
-import {MatIcon} from '@angular/material/icon';
-import {MatToolbar} from '@angular/material/toolbar';
-import {MatMenuTrigger} from '@angular/material/menu';
-import {AccountMenu} from '../account-menu/account-menu';
-import {RouterLink} from '@angular/router';
+import { Component, Input, Signal } from '@angular/core';
+import { MatButton, MatIconButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatMenuTrigger } from '@angular/material/menu';
+import { RouterLink } from '@angular/router';
+import { AccountMenu } from '../account-menu/account-menu';
 
 @Component({
   selector: 'app-topbar',
-  imports: [
-    MatButton,
-    MatIcon,
-    MatToolbar,
-    MatIconButton,
-    MatMenuTrigger,
-    AccountMenu,
-    RouterLink
-  ],
+  imports: [MatButton, MatIcon, MatToolbar, MatIconButton, MatMenuTrigger, RouterLink, AccountMenu],
   template: `
     <mat-toolbar class="mat-bg-secondary-container">
       <a matButton routerLink="home">
@@ -31,11 +23,10 @@ import {RouterLink} from '@angular/router';
         <mat-icon>account_circle</mat-icon>
         <span>Account</span>
       </button>
-      <account-menu #accountMenu></account-menu>
+      <app-account-menu #accountMenu></app-account-menu>
     </mat-toolbar>
-
   `,
-  styles  : `
+  styles: `
     mat-icon {
       color: var(--mat-sys-primary);
     }
@@ -45,9 +36,8 @@ import {RouterLink} from '@angular/router';
     .padding {
       margin: auto;
     }
-  `
-
+  `,
 })
 export class Topbar {
-  @Input({required: true}) title!: Signal<String>
+  @Input({ required: true }) title!: Signal<string>;
 }

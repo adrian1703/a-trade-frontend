@@ -1,29 +1,24 @@
-import {Component, signal} from '@angular/core';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {Topbar} from './topbar/topbar';
-import {MatToolbar} from '@angular/material/toolbar';
-import {RouterOutlet} from '@angular/router';
+import { Component, signal } from '@angular/core';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { Topbar } from './topbar/topbar';
+import { MatToolbar } from '@angular/material/toolbar';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    MatSlideToggleModule,
-    Topbar,
-    MatToolbar,
-  ],
+  imports: [RouterOutlet, MatSlideToggleModule, Topbar, MatToolbar],
   template: `
     <div class="app">
-      <app-topbar class="header" [title]="title"/>
+      <app-topbar class="header" [title]="title" />
       <div class="main">
-        <router-outlet/>
+        <router-outlet />
       </div>
       <mat-toolbar class="footer">
         <span>Placeholder</span>
       </mat-toolbar>
     </div>
   `,
-  styles  : `
+  styles: `
     .app {
       display: flex;
       flex-direction: column;
@@ -43,7 +38,7 @@ import {RouterOutlet} from '@angular/router';
       background: var(--mat-sys-primary-container);
       flex: 0 0 auto;
     }
-  `
+  `,
 })
 export class App {
   protected readonly title = signal('A-Trade');

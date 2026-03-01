@@ -1,6 +1,6 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import {StorageService} from './storage.service';
+import { StorageService } from './storage.service';
 
 describe('StorageService', () => {
   let service: StorageService;
@@ -14,10 +14,10 @@ describe('StorageService', () => {
     sessionStorage.clear();
 
     // Clear cookies for testing cookie functions
-    document.cookie.split(";").forEach(cookie => {
-      const eqPos     = cookie.indexOf("=");
-      const name      = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+    document.cookie.split(';').forEach((cookie) => {
+      const eqPos = cookie.indexOf('=');
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
     });
   });
 
@@ -27,6 +27,7 @@ describe('StorageService', () => {
 
   describe('Cookie Operations', () => {
     it('should return null for non-existent cookie', () => {
+      /* empty */
     });
     expect(service.readCookie('test1')).toBeNull();
 

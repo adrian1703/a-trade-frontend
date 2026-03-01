@@ -1,13 +1,13 @@
-import {Component, inject} from '@angular/core';
-import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from '@angular/material/card';
-import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
-import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
-import {MatButton} from '@angular/material/button';
-import {AuthService} from '../auth.service';
+import { Component, inject } from '@angular/core';
+import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
+import { MatFormField, MatInput, MatLabel } from '@angular/material/input';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatButton } from '@angular/material/button';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
-  imports : [
+  imports: [
     MatCard,
     MatCardHeader,
     MatCardTitle,
@@ -16,7 +16,7 @@ import {AuthService} from '../auth.service';
     MatLabel,
     MatInput,
     ReactiveFormsModule,
-    MatButton
+    MatButton,
   ],
   template: `
     <div class="login-container mt-10">
@@ -28,11 +28,16 @@ import {AuthService} from '../auth.service';
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col">
             <mat-form-field class="mt-1">
               <mat-label>Username</mat-label>
-              <input matInput formControlName="username" placeholder="Enter username">
+              <input matInput formControlName="username" placeholder="Enter username" />
             </mat-form-field>
             <mat-form-field class="">
               <mat-label>Password</mat-label>
-              <input matInput type="password" formControlName="password" placeholder="Enter password">
+              <input
+                matInput
+                type="password"
+                formControlName="password"
+                placeholder="Enter password"
+              />
             </mat-form-field>
 
             <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
@@ -43,7 +48,7 @@ import {AuthService} from '../auth.service';
       </mat-card>
     </div>
   `,
-  styles  : `
+  styles: `
     .login-container {
       display: flex;
       flex-direction: column;
@@ -58,7 +63,7 @@ import {AuthService} from '../auth.service';
   `,
 })
 export class LoginComponent {
-  private fb          = inject(FormBuilder);
+  private fb = inject(FormBuilder);
   loginForm = this.fb.group({
     username: ['', [Validators.required]],
     password: ['', [Validators.required]],
@@ -67,7 +72,7 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      const {username, password} = this.loginForm.value;
+      const { username, password } = this.loginForm.value;
       this.authService.login(username!, password!);
     }
   }

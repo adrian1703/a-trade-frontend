@@ -1,23 +1,23 @@
-import {Routes} from '@angular/router';
-import {homeComponentRoutes} from './home/home.component.routes';
-import {authGuard} from './security/guards/auth.guard';
-import {LoginComponent} from './security/login/login.component';
+import { Routes } from '@angular/router';
+import { homeComponentRoutes } from './home/home.component.routes';
+import { authGuard } from './security/guards/auth.guard';
+import { LoginComponent } from './security/login/login.component';
 
 export const routes: Routes = [
   {
-    path      : '',
+    path: '',
     redirectTo: '/home',
-    pathMatch : 'full'
+    pathMatch: 'full',
   },
   {
-    path     : 'login',
+    path: 'login',
     component: LoginComponent,
   },
 
   {
-    path         : 'home',
-    loadComponent: () => import('./home/home.component').then(m => m.HomeComponent),
-    canActivate  : [authGuard],
-    children     : homeComponentRoutes
-  }
+    path: 'home',
+    loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
+    canActivate: [authGuard],
+    children: homeComponentRoutes,
+  },
 ];

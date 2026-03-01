@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {AuthApi, LoginResponse} from './auth.api';
-import {ApiResult} from '../../api/api-result.model';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthApi, LoginResponse } from './auth.api';
+import { ApiResult } from '../../api/api-result.model';
 
 @Injectable()
 export class AuthApiHttp implements AuthApi {

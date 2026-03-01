@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {ButtonsPage} from './buttons-page';
+import { ButtonsPage } from './buttons-page';
 
 describe('ButtonsPage', () => {
   let component: ButtonsPage;
@@ -8,11 +8,10 @@ describe('ButtonsPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ButtonsPage]
-    })
-                 .compileComponents();
+      imports: [ButtonsPage],
+    }).compileComponents();
 
-    fixture   = TestBed.createComponent(ButtonsPage);
+    fixture = TestBed.createComponent(ButtonsPage);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

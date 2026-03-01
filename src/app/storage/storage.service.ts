@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -9,8 +9,8 @@ export class StorageService {
   }
 
   readCookie(key: string): string | null {
-    const nameEQ = encodeURIComponent(key) + "=";
-    const ca     = document.cookie.split(';');
+    const nameEQ = encodeURIComponent(key) + '=';
+    const ca = document.cookie.split(';');
     for (let c of ca) {
       while (c.charAt(0) === ' ') c = c.substring(1, c.length);
       if (c.indexOf(nameEQ) === 0) {
