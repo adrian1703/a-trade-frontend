@@ -10,6 +10,9 @@ Roadmap:
 - Authservice - somewhat untested but good enough
   - started jwt mock backend
     - ~~mock api~~ - sort of finished
+      - dynamically generate jwt with custom expiration time like 5 min to test logout
+      - how do i handle the logged in status?
+      - hookup guard auth
     - maybe a mocktest on admin
     - need dynamic token gen
     - hockup authservice with mock backend
